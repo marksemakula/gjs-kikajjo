@@ -408,7 +408,7 @@ const GJSKikajjo = () => {
       <section className="relative overflow-hidden text-white py-32" style={{ backgroundColor: brandColors.secondary }}>
         <div className="absolute inset-0">
           <img 
-            src="/images/happy pupil.jpg" 
+            src="/happy pupil.jpg" 
             alt="Gombe Junior School - Kikajjo" 
             className="w-full h-full object-cover opacity-20"
           />
@@ -441,7 +441,7 @@ const GJSKikajjo = () => {
               className="flex justify-center md:justify-end"
             >
               <img 
-                src="/images/Gombe Junior School logo.png" 
+                src="/Gombe Junior School logo.png" 
                 alt="Gombe Junior School" 
                 className="w-96 h-96 object-contain"
               />
@@ -634,7 +634,7 @@ const GJSKikajjo = () => {
             <div>
               <div className="flex items-center mb-4">
                 <img 
-                  src="/images/Gombe Junior School logo.png" 
+                  src="/Gombe Junior School logo.png" 
                   alt="Gombe Junior School" 
                   className="h-40 w-auto mr-3 grayscale"
                 />
@@ -699,7 +699,7 @@ const GJSKikajjo = () => {
               <div className="flex items-center space-x-2">
                 <span className="text-gray-300 text-sm">Powered by</span>
                 <img 
-                  src="/images/Inzozi-grayscale.png" 
+                  src="/Inzozi-grayscale.png" 
                   alt="Inzozi Logo" 
                   className="h-16 w-auto brightness-0 invert" 
                 />
