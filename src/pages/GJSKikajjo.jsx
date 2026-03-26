@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Marquee from 'react-fast-marquee';
 import { motion } from 'framer-motion';
 import { LuMapPin, LuPhone, LuMail, LuUsers, LuAward, LuBookOpen, LuGlobe, LuExternalLink, LuTarget, LuMenu, LuX, LuChevronDown } from 'react-icons/lu';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
@@ -91,6 +92,17 @@ const GJSKikajjo = () => {
       description: 'Uganda National Curriculum integrated with international standards for P1-P7',
       features: ['Primary (P1-P7)', 'Life Skills', 'Competency-Based'],
     }
+  ];
+
+  // Each logo slot: width 120px + mx-10 (40px each side) = 200px. 7 logos × 200 = 1400px per copy.
+  const carouselLogos = [
+    { src: '/MoES1.png', alt: 'MoES' },
+    { src: '/GES.png', alt: 'GES' },
+    { src: '/Flag_of_Buganda.svg', alt: 'Flag of Buganda' },
+    { src: '/Gombe High logo.png', alt: 'Gombe High' },
+    { src: '/IPP.png', alt: 'IPP' },
+    { src: '/Jimmy Ssekasi Business Institute Logo.png', alt: 'Jimmy Ssekasi Business Institute' },
+    { src: '/scooby-logo.png', alt: 'Scooby' },
   ];
 
   return (
@@ -419,7 +431,7 @@ const GJSKikajjo = () => {
       <section className="relative overflow-hidden text-white py-32" style={{ backgroundColor: brandColors.secondary }}>
         <div className="absolute inset-0">
           <img 
-            src="/happy pupil.jpg" 
+            src="/gjsIMG_1707.JPG" 
             alt="Gombe Junior School - Kikajjo" 
             className="w-full h-full object-cover opacity-20"
           />
@@ -461,11 +473,33 @@ const GJSKikajjo = () => {
         </div>
       </section>
 
-      {/* Wavy Divider */}
-      <div className="w-full" style={{ marginTop: '-1px', lineHeight: 0 }}>
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full" style={{ height: '100px', display: 'block' }}>
-          <path d="M0,0 C300,90 600,90 900,0 C1050,50 1150,50 1200,0 L1200,120 L0,120 Z" fill="#FFF9F5"></path>
-        </svg>
+      {/* Logo Carousel */}
+      <div className="py-8" style={{ backgroundColor: '#FFF9F5' }}>
+        <Marquee
+          gradient
+          gradientColor="#FFF9F5"
+          gradientWidth={96}
+          speed={60}
+          pauseOnHover
+        >
+          {/* 4× repetition ensures content always fills the viewport before the library clones it */}
+          {[0, 1, 2, 3].flatMap((setIdx) =>
+            carouselLogos.map((logo, i) => (
+              <div
+                key={`${setIdx}-${i}`}
+                style={{ width: '120px', height: '80px', margin: '0 40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+              >
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={120}
+                  height={80}
+                  className="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
+                />
+              </div>
+            ))
+          )}
+        </Marquee>
       </div>
 
       {/* Stats Section */}
