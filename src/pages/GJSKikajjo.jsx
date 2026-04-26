@@ -4,10 +4,38 @@ import { motion } from 'framer-motion';
 import { LuMapPin, LuPhone, LuMail, LuUsers, LuAward, LuBookOpen, LuGlobe, LuExternalLink, LuTarget, LuMenu, LuX, LuChevronDown } from 'react-icons/lu';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 
+const gjsPics = [
+  '/GJS%20Pics/GOMBE%20HIGH%20SCHOOL.jpg',
+  '/GJS%20Pics/GOMBE%20JUNIOR%20SCHOOL%20BOARDING.JPG',
+  '/GJS%20Pics/IMG_0069.JPG',
+  '/GJS%20Pics/IMG_1378.JPG',
+  '/GJS%20Pics/IMG_1678.JPG',
+  '/GJS%20Pics/IMG_1685.JPG',
+  '/GJS%20Pics/IMG_1690.JPG',
+  '/GJS%20Pics/IMG_1697.JPG',
+  '/GJS%20Pics/IMG_1707.JPG',
+  '/GJS%20Pics/IMG_1708.JPG',
+  '/GJS%20Pics/IMG_1737.JPG',
+  '/GJS%20Pics/IMG_1747.JPG',
+  '/GJS%20Pics/IMG_1764.JPG',
+  '/GJS%20Pics/IMG_1768.JPG',
+  '/GJS%20Pics/IMG_2804.JPG',
+  '/GJS%20Pics/IMG_5387.JPG',
+  '/GJS%20Pics/IMG_7534.JPG',
+  '/GJS%20Pics/IMG_7541.JPG',
+  '/GJS%20Pics/IMG_7542.JPG',
+  '/GJS%20Pics/IMG_7544.JPG',
+  '/GJS%20Pics/IMG_8873.JPG',
+  '/GJS%20Pics/IMG_8893.JPG',
+  '/GJS%20Pics/IMG_8912.JPG',
+];
+
 const GJSKikajjo = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [mobileDropdown, setMobileDropdown] = useState(null);
+  const [heroImageIndex, setHeroImageIndex] = useState(() => Math.floor(Math.random() * gjsPics.length));
+  const [heroVisible, setHeroVisible] = useState(true);
 
   const navItems = [
     { label: 'Home', href: '#home' },
@@ -50,6 +78,21 @@ const GJSKikajjo = () => {
       ],
     },
   ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHeroVisible(false);
+      setTimeout(() => {
+        setHeroImageIndex(prev => {
+          let next;
+          do { next = Math.floor(Math.random() * gjsPics.length); } while (next === prev);
+          return next;
+        });
+        setHeroVisible(true);
+      }, 500);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     // Change favicon when component mounts
@@ -430,10 +473,11 @@ const GJSKikajjo = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden text-white py-32" style={{ backgroundColor: brandColors.secondary }}>
         <div className="absolute inset-0">
-          <img 
-            src="/gjsIMG_1707.JPG" 
-            alt="Gombe Junior School - Kikajjo" 
-            className="w-full h-full object-cover opacity-20"
+          <img
+            src={gjsPics[heroImageIndex]}
+            alt="Gombe Junior School - Kikajjo"
+            className="w-full h-full object-cover transition-opacity duration-500"
+            style={{ opacity: heroVisible ? 0.2 : 0 }}
           />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
