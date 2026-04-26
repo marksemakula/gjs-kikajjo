@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Marquee from 'react-fast-marquee';
 import { motion } from 'framer-motion';
 import { LuMapPin, LuPhone, LuMail, LuUsers, LuAward, LuBookOpen, LuGlobe, LuExternalLink, LuTarget, LuMenu, LuX, LuChevronDown } from 'react-icons/lu';
@@ -73,7 +74,7 @@ const GJSKikajjo = () => {
       label: "Student's Life",
       dropdown: [
         { label: 'Articles', href: '#articles' },
-        { label: 'Images', href: '#gallery' },
+        { label: 'Images', href: '#gallery', route: '/gallery' },
         { label: 'Student Clubs and Societies', href: '#clubs' },
       ],
     },
@@ -385,15 +386,25 @@ const GJSKikajjo = () => {
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.15 }}
                         >
-                          {item.dropdown.map((sub) => (
-                            <a
-                              key={sub.href}
-                              href={sub.href}
-                              className="block px-4 py-2.5 text-gray-700 hover:bg-[#FFF9E6] hover:text-[#800E13] transition-colors rounded-lg mx-2 text-sm"
-                            >
-                              {sub.label}
-                            </a>
-                          ))}
+                          {item.dropdown.map((sub) =>
+                            sub.route ? (
+                              <Link
+                                key={sub.route}
+                                to={sub.route}
+                                className="block px-4 py-2.5 text-gray-700 hover:bg-[#FFF9E6] hover:text-[#800E13] transition-colors rounded-lg mx-2 text-sm"
+                              >
+                                {sub.label}
+                              </Link>
+                            ) : (
+                              <a
+                                key={sub.href}
+                                href={sub.href}
+                                className="block px-4 py-2.5 text-gray-700 hover:bg-[#FFF9E6] hover:text-[#800E13] transition-colors rounded-lg mx-2 text-sm"
+                              >
+                                {sub.label}
+                              </a>
+                            )
+                          )}
                         </motion.div>
                       </div>
                     )}
@@ -441,16 +452,27 @@ const GJSKikajjo = () => {
                     </button>
                     {mobileDropdown === item.label && (
                       <div className="ml-4 space-y-1">
-                        {item.dropdown.map((sub) => (
-                          <a
-                            key={sub.href}
-                            href={sub.href}
-                            onClick={() => setIsMenuOpen(false)}
-                            className="block py-2 px-4 text-sm text-gray-600 hover:text-[#800E13] rounded-lg hover:bg-[#FFF9E6] transition-colors"
-                          >
-                            {sub.label}
-                          </a>
-                        ))}
+                        {item.dropdown.map((sub) =>
+                          sub.route ? (
+                            <Link
+                              key={sub.route}
+                              to={sub.route}
+                              onClick={() => setIsMenuOpen(false)}
+                              className="block py-2 px-4 text-sm text-gray-600 hover:text-[#800E13] rounded-lg hover:bg-[#FFF9E6] transition-colors"
+                            >
+                              {sub.label}
+                            </Link>
+                          ) : (
+                            <a
+                              key={sub.href}
+                              href={sub.href}
+                              onClick={() => setIsMenuOpen(false)}
+                              className="block py-2 px-4 text-sm text-gray-600 hover:text-[#800E13] rounded-lg hover:bg-[#FFF9E6] transition-colors"
+                            >
+                              {sub.label}
+                            </a>
+                          )
+                        )}
                       </div>
                     )}
                   </div>
