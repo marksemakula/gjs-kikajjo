@@ -113,7 +113,6 @@ const GJSKikajjo = () => {
     secondary: '#800E13', // Burgundy
   };
 
-  const stats = [];
 
   const programs = [
     {
@@ -563,8 +562,8 @@ const GJSKikajjo = () => {
         </Marquee>
       </div>
 
-      {/* Stats Section */}
-      <section className="py-20" style={{ backgroundColor: '#FFF9F5' }}>
+      {/* Campus Media Section */}
+      <section className="py-20 relative overflow-hidden" style={{ backgroundColor: '#FFF9F5' }}>
         {/* Decorative Elements */}
         <div className="absolute top-10 left-10 opacity-10 z-0">
           <svg width="80" height="80" viewBox="0 0 100 100">
@@ -580,23 +579,49 @@ const GJSKikajjo = () => {
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full mb-4" style={{ backgroundColor: '#fff', boxShadow: '0 10px 30px rgba(128,14,19,0.1)' }}>
-                  <stat.icon className="w-10 h-10" style={{ color: brandColors.primary }} />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Image Column */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative rounded-3xl overflow-hidden shadow-2xl group"
+              style={{ border: `4px solid ${brandColors.primary}` }}
+            >
+              <Link to="/gallery" className="block w-full h-full">
+                <img 
+                  src="/GOMBE%20JUNIOR%20SCHOOL%20BOARDING.JPG" 
+                  alt="Gombe Junior School Boarding" 
+                  className="w-full h-full object-cover aspect-video transform group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+                  <h3 className="text-white font-bold text-xl">Campus Life</h3>
                 </div>
-                <div className="text-4xl font-bold mb-2" style={{ color: brandColors.secondary }}>{stat.value}</div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
-              </motion.div>
-            ))}
+              </Link>
+            </motion.div>
+
+            {/* Video Column */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative rounded-3xl overflow-hidden shadow-2xl"
+              style={{ border: `4px solid ${brandColors.secondary}` }}
+            >
+              <video 
+                src="/GJS%20KAMPALA%20VIRTUAL%20TOUR.mp4" 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="w-full h-full object-cover aspect-video"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent pointer-events-none">
+                <h3 className="text-white font-bold text-xl">Virtual Tour</h3>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
