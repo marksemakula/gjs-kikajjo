@@ -113,12 +113,7 @@ const GJSKikajjo = () => {
     secondary: '#800E13', // Burgundy
   };
 
-  const stats = [
-    { icon: LuUsers, label: 'Students', value: '400+' },
-    { icon: LuAward, label: 'Pass Rate', value: '99%' },
-    { icon: LuBookOpen, label: 'Curricula', value: '2' },
-    { icon: LuGlobe, label: 'Countries', value: '12+' },
-  ];
+  const stats = [];
 
   const programs = [
     {
