@@ -7,7 +7,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from 're
 
 const gjsPics = [
   '/GJS%20Pics/GOMBE%20HIGH%20SCHOOL.jpg',
-  '/GJS%20Pics/GOMBE%20JUNIOR%20SCHOOL%20BOARDING.JPG',
+  '/GJS%20Pics/GOMBE%20JUNIOR%20SCHOOL%20KIKAJJO.JPG',
   '/GJS%20Pics/IMG_0069.JPG',
   '/GJS%20Pics/IMG_1378.JPG',
   '/GJS%20Pics/IMG_1678.JPG',
@@ -63,10 +63,10 @@ const GJSKikajjo = () => {
     {
       label: 'Admissions',
       dropdown: [
-        { label: 'Apply Now', href: '#apply' },
-        { label: 'Resources - Fees', href: '#fees' },
+        { label: 'Apply Now', href: '#apply', route: '/admissions/apply' },
+        { label: 'Resources - Fees', href: '#fees', route: '/admissions/fees' },
         { label: 'FAQs', href: '#faqs' },
-        { label: 'Documents', href: '#documents' },
+        { label: 'Documents', href: '#documents', route: '/admissions/documents' },
         { label: 'Overview', href: '#admissions-overview' },
       ],
     },
@@ -591,8 +591,8 @@ const GJSKikajjo = () => {
             >
               <Link to="/gallery" className="block w-full h-full">
                 <img 
-                  src="/GOMBE%20JUNIOR%20SCHOOL%20BOARDING.JPG" 
-                  alt="Gombe Junior School Boarding" 
+                  src="/GOMBE%20JUNIOR%20SCHOOL%20KIKAJJO.JPG" 
+                  alt="Gombe Junior School Kikajjo" 
                   className="w-full h-full object-cover aspect-video transform group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
@@ -734,7 +734,7 @@ const GJSKikajjo = () => {
             <div className="flex flex-wrap justify-center gap-6 mb-12">
               <div className="flex items-center space-x-2">
                 <LuMapPin className="w-5 h-5" style={{ color: brandColors.primary }} />
-                <span>Katale, Kampala</span>
+                <span>Kikajjo, Kampala</span>
               </div>
               <div className="flex items-center space-x-2">
                 <LuPhone className="w-5 h-5" style={{ color: brandColors.primary }} />
@@ -845,7 +845,7 @@ const GJSKikajjo = () => {
           </div>
 
           {/* Bottom Bar */}
-          <div className="border-t border-white/20 pt-3">
+          <div className="pt-3">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-gray-300 mb-4 md:mb-0">
                 &copy; {new Date().getFullYear()} Gombe Junior School (GJS). All rights reserved.

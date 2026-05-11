@@ -14,9 +14,8 @@ const Header = () => {
     { name: 'St. Andrew Kaggwa Gombe High School - Kawaala', subdomain: 'sakghs-kawaala', path: '/institutions/sakghs-kawaala', description: 'Advanced Secondary Education' },
     { name: 'St. Andrew Kaggwa Gombe High School - Bujuuko', subdomain: 'sakghs-bujuuko', path: '/institutions/sakghs-bujuuko', description: 'Advanced Secondary Education' },
     { name: 'Gombe Junior School - Kikajjo', subdomain: 'gjs-kikajjo', path: '/institutions/gjs-kikajjo', description: 'Primary & Lower Secondary' },
-    { name: 'Gombe Junior School - Boarding', subdomain: 'gjs-boarding', path: '/institutions/gjs-boarding', description: 'Primary & Lower Secondary' },
-    { name: 'Scooby Doo International School Uganda (SISU) - Katale Campus', subdomain: 'sisu-katale', path: '/institutions/scooby-katale', description: 'International Curriculum' },
-    { name: 'Scooby Doo International School Uganda (SISU) - Gulu Campus', subdomain: 'sisu-gulu', path: '/institutions/scooby-gulu', description: 'International Curriculum' },
+
+    { name: 'Scooby Doo International School Uganda (SISU) - Kikajjo Campus', subdomain: 'sisu-kikajjo', path: '/institutions/scooby-kikajjo', description: 'International Curriculum' },
     { name: 'Jimmy Sekasi Business Institute', subdomain: 'jsbi', path: '/institutions/jsbi', description: 'Business & Entrepreneurship' },
   ];
 
