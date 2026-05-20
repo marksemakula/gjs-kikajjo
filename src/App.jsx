@@ -5,6 +5,7 @@ import GalleryPage from './pages/GalleryPage';
 import ApplyPage from './pages/admissions/ApplyPage';
 import FeesPage from './pages/admissions/FeesPage';
 import DocumentsPage from './pages/admissions/DocumentsPage';
+import PrincipalMessage from './pages/PrincipalMessage';
 import './App.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<GJSKikajjo />} />
         <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/principal-message" element={<PrincipalMessage />} />
         <Route path="/admissions/apply" element={<ApplyPage />} />
         <Route path="/admissions/fees" element={<FeesPage />} />
         <Route path="/admissions/documents" element={<DocumentsPage />} />
