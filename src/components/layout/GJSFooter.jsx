@@ -10,7 +10,7 @@ const brandColors = {
 };
 
 const campuses = [
-  { name: 'Gombe Junior School (Kikajjo)', contact: '+256 700 000 004', path: '/institutions/gjs-kikajjo' },
+  { name: 'Gombe Junior School (Kikajjo)', contact: '0708 800 002 / 0708 800 004', path: '/institutions/gjs-kikajjo' },
 
 ];
 
@@ -116,9 +116,8 @@ const GJSFooter = () => {
               <div className="flex items-start gap-2">
                 <LuPhone className="w-4 h-4 mt-0.5" style={{ color: brandColors.primary }} />
                 <div>
-                  <p>+256 700 000 004 (Kikajjo)</p>
-                  <p>+256 700 000 005 (Kikajjo)</p>
-                  <p>+256 700 000 006 (Kikajjo)</p>
+                  <p>0708 800 002</p>
+                  <p>0708 800 004</p>
                 </div>
               </div>
               <div className="flex items-start gap-2">

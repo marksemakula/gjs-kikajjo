@@ -738,7 +738,7 @@ const GJSKikajjo = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <LuPhone className="w-5 h-5" style={{ color: brandColors.primary }} />
-                <span>+256 414 694 516</span>
+                <span>0708 800 002 / 0708 800 004</span>
               </div>
               <div className="flex items-center space-x-2">
                 <LuMail className="w-5 h-5" style={{ color: brandColors.primary }} />
@@ -789,9 +789,7 @@ const GJSKikajjo = () => {
                 <div className="flex items-start space-x-3">
                   <LuPhone className="w-5 h-5 mt-1 flex-shrink-0" />
                   <div className="text-gray-200">
-                    <div>Tel: +256 414 694 516</div>
-                    <div>Mobile: +256 708 800 005</div>
-                    <div>Mobile: +256 708 800 006</div>
+                    <div>Tel: 0708 800 002 / 0708 800 004</div>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
