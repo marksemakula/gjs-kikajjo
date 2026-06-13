@@ -184,7 +184,7 @@ const GJSKikajjo = () => {
               transition={{ duration: 0.5, type: "spring", bounce: 0.5 }}
             >
               <h1 className="text-2xl font-bold" style={{ color: brandColors.secondary }}>
-                GJS <span style={{ color: brandColors.primary }}>Kikajjo</span>
+                Gombe Junior School - <span style={{ color: brandColors.primary }}>Kampala</span>
               </h1>
             </motion.div>
 
@@ -345,7 +345,7 @@ const GJSKikajjo = () => {
                 Gombe Junior School (GJS)
               </h1>
               <p className="text-xl mb-4" style={{ color: brandColors.primary }}>
-                Kikajjo Campus
+                Kikajjo Campus (Day and Boarding)
               </p>
             </motion.div>
             
