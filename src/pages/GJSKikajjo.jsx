@@ -57,7 +57,7 @@ const GJSKikajjo = () => {
         { label: 'Academic Program', href: '#academic-program' },
         { label: 'Curriculum - Subjects', href: '#curriculum' },
         { label: 'Departments', href: '#departments' },
-        { label: 'UNED Results - Archives', href: '#uned-results' },
+        { label: 'UNEB Results - Archives', href: '#uned-results' },
       ],
     },
     {
