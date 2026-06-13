@@ -46,7 +46,7 @@ const GJSKikajjo = () => {
         { label: 'School Profile', href: '#school-profile' },
         { label: 'Mission & Vision', href: '#mission' },
         { label: 'Core Values', href: '#core-values' },
-        { label: 'Board of Governors', href: '#board' },
+        { label: 'School Management Committee', href: '#board' },
         { label: "Principal's Message", href: '#principals-message', route: '/principal-message' },
         { label: 'Administration and Management Team', href: '#management' },
       ],
