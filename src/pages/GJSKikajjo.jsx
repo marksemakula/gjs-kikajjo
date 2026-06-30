@@ -116,19 +116,18 @@ const GJSKikajjo = () => {
 
   const programs = [
     {
-      title: 'IB Program',
-      description: 'International Baccalaureate foundation tailored for primary learners',
-      features: ['Primary Years', 'Inquiry Learning', 'Global Skills'],
-    },
-    {
       title: 'ICT & e-Learning Program',
       description: 'Digital-first learning that builds strong tech literacy from the early years',
       features: ['Digital Literacy', 'Coding Fundamentals', 'Blended Learning'],
+      bgColor: '#E8F5FF',
+      accentColor: '#4FB8FF',
     },
     {
       title: 'National Curriculum',
       description: 'Uganda National Curriculum integrated with international standards for P1-P7',
       features: ['Primary (P1-P7)', 'Life Skills', 'Competency-Based'],
+      bgColor: '#E8FFE8',
+      accentColor: '#5FD068',
     }
   ];
 
@@ -493,10 +492,8 @@ const GJSKikajjo = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {programs.map((program, index) => {
-              const bgColors = ['#FFE8E8', '#E8F5FF', '#E8FFE8'];
-              const accentColors = ['#FF6B35', '#4FB8FF', '#5FD068'];
               return (
                 <motion.div
                   key={index}
@@ -508,13 +505,13 @@ const GJSKikajjo = () => {
                   className="bg-white p-8 shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden"
                   style={{
                     borderRadius: '30px',
-                    backgroundColor: bgColors[index % 3]
+                    backgroundColor: program.bgColor
                   }}
                 >
                   <div className="inline-block px-5 py-2 rounded-full text-sm font-bold mb-4" 
                     style={{ 
                       backgroundColor: '#fff', 
-                      color: accentColors[index % 3],
+                      color: program.accentColor,
                       boxShadow: '0 4px 15px rgba(0,0,0,0.1)'
                     }}>
                     {program.title}
@@ -527,7 +524,7 @@ const GJSKikajjo = () => {
                     {program.features.map((feature, fIndex) => (
                       <li key={fIndex} className="flex items-start text-gray-700">
                         <span className="w-6 h-6 rounded-full mr-3 flex items-center justify-center flex-shrink-0" 
-                          style={{ backgroundColor: accentColors[index % 3] }}>
+                          style={{ backgroundColor: program.accentColor }}>
                           <span className="text-white text-xs">\u2713</span>
                         </span>
                         <span className="pt-0.5">{feature}</span>
@@ -537,7 +534,7 @@ const GJSKikajjo = () => {
                   
                   {/* Decorative blob */}
                   <div className="absolute -bottom-10 -right-10 w-40 h-40 rounded-full opacity-20" 
-                    style={{ backgroundColor: accentColors[index % 3] }}></div>
+                    style={{ backgroundColor: program.accentColor }}></div>
                 </motion.div>
               );
             })}
