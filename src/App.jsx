@@ -6,6 +6,7 @@ import ApplyPage from './pages/admissions/ApplyPage';
 import FeesPage from './pages/admissions/FeesPage';
 import DocumentsPage from './pages/admissions/DocumentsPage';
 import PrincipalMessage from './pages/PrincipalMessage';
+import SchoolProfile from './pages/SchoolProfile';
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<GJSKikajjo />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/principal-message" element={<PrincipalMessage />} />
+        <Route path="/about/school-profile" element={<SchoolProfile />} />
         <Route path="/admissions/apply" element={<ApplyPage />} />
         <Route path="/admissions/fees" element={<FeesPage />} />
         <Route path="/admissions/documents" element={<DocumentsPage />} />

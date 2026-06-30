@@ -43,7 +43,7 @@ const GJSKikajjo = () => {
     {
       label: 'About Us',
       dropdown: [
-        { label: 'School Profile', href: '#school-profile' },
+        { label: 'School Profile', route: '/about/school-profile' },
         { label: 'Mission & Vision', href: '#mission' },
         { label: 'Core Values', href: '#core-values' },
         { label: 'School Management Committee', href: '#board' },
@@ -138,7 +138,7 @@ const GJSKikajjo = () => {
     { src: '/Flag_of_Buganda.svg', alt: 'Flag of Buganda' },
     { src: '/Gombe High logo.png', alt: 'Gombe High' },
     { src: '/IPP.png', alt: 'IPP' },
-    { src: '/Jimmy Ssekasi Business Institute Logo.png', alt: 'Jimmy Ssekasi Business Institute' },
+    { src: '/Jimmy Ssekasi Business Institute Logo.png', alt: 'Gombe Institute of Business, Science & Technology' },
     { src: '/scooby-logo.png', alt: 'Scooby' },
   ];
 
