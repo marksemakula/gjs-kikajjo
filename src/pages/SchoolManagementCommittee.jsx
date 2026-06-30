@@ -98,7 +98,7 @@ const SchoolManagementCommittee = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
               whileHover={{ y: -8, transition: { duration: 0.2 } }}
-              className="bg-white rounded-[32px] overflow-hidden shadow-xl border border-gray-100 flex flex-col"
+              className="bg-white overflow-hidden shadow-xl border border-gray-100 flex flex-col"
             >
               {/* Profile Image Frame */}
               <div className="relative h-96 w-full overflow-hidden bg-gray-100 border-b-4" style={{ borderColor: brandColors.primary }}>
@@ -137,7 +137,7 @@ const SchoolManagementCommittee = () => {
         </div>
 
         {/* Commitment Statement */}
-        <section className="mt-16 bg-white border border-[#F0E4D8] rounded-[32px] p-8 text-center shadow-lg max-w-4xl mx-auto">
+        <section className="mt-16 bg-white border border-[#F0E4D8] p-8 text-center shadow-lg max-w-4xl mx-auto">
           <p className="text-[#800E13] font-bold text-lg mb-2">Our Governance Promise</p>
           <p className="text-sm text-gray-600 leading-relaxed">
             The School Management Committee remains committed to providing strategic leadership, ensuring high accountability, supporting teachers, and creating a safe, spiritually grounding environment for every child.

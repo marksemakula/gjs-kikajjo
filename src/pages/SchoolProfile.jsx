@@ -56,13 +56,13 @@ const SchoolProfile = () => {
   ];
 
   const sisterSchools = [
+    { name: 'Gombe Institute of Business, Science & Technology', loc: 'Kabalagala - Muzaana Zone, Kampala' },
     { name: 'Gombe Junior School Kikajjo - Day School', loc: 'Kikajjo (Same Location)' },
     { name: 'Scooby-Doo International School Uganda (SISU) - Katale', loc: 'Along Sseguku - Katale Rd' },
     { name: 'Scooby-Doo International School Uganda (SISU) - Gulu', loc: 'Gulu City' },
     { name: 'Gombe Junior School - Gulu', loc: 'Gulu City' },
     { name: 'St. Andrew Kaggwa Gombe High School - Bujuuko', loc: 'Kampala - Mityana Road' },
-    { name: 'St. Andrew Kaggwa Gombe High School - Kawaala', loc: 'Kampala - Hoima Road' },
-    { name: 'Gombe Institute of Business, Science & Technology', loc: 'Kabalagala - Muzaana Zone, Kampala' }
+    { name: 'St. Andrew Kaggwa Gombe High School - Kawaala', loc: 'Kampala - Hoima Road' }
   ];
 
   return (
@@ -129,7 +129,7 @@ const SchoolProfile = () => {
           
           {/* Navigation Sidebar */}
           <div className="lg:col-span-1">
-            <div className="sticky top-24 bg-white rounded-[24px] shadow-md border border-gray-100 p-4 space-y-1">
+            <div className="sticky top-24 bg-white rounded-none shadow-md border border-gray-100 p-4 space-y-1">
               <p className="text-xs uppercase tracking-wider text-gray-400 font-bold px-3 mb-3">Sections</p>
               {tabs.map((tab) => {
                 const IconComponent = tab.icon;
@@ -138,7 +138,7 @@ const SchoolProfile = () => {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left text-sm font-medium transition-all duration-200 ${
+                    className={`w-full flex items-center gap-3 px-4 py-3 rounded-none text-left text-sm font-medium transition-all duration-200 ${
                       isActive 
                         ? 'text-white shadow-md' 
                         : 'text-gray-600 hover:bg-[#FFF6CC] hover:text-[#800E13]'
@@ -162,7 +162,7 @@ const SchoolProfile = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -15 }}
                 transition={{ duration: 0.25 }}
-                className="bg-white rounded-[32px] shadow-xl border border-[#F0E4D8] p-8 sm:p-10 min-h-[500px]"
+                className="bg-white rounded-none shadow-xl border border-[#F0E4D8] p-8 sm:p-10 min-h-[500px]"
               >
                 
                 {/* ── TAB 1: IDENTITY & HISTORY ── */}
@@ -174,13 +174,13 @@ const SchoolProfile = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="bg-[#FFF9F5] p-5 rounded-2xl border border-[#F5E6DA] space-y-2">
+                      <div className="bg-[#FFF9F5] p-5 rounded-none border border-[#F5E6DA] space-y-2">
                         <span className="text-xs font-bold uppercase text-[#B1742F]">Nature of School</span>
                         <h4 className="text-lg font-bold text-gray-800">Boarding Primary School</h4>
                         <p className="text-sm text-gray-600">Gombe Junior School is purely a boarding primary school environment structured to provide a home away from home.</p>
                       </div>
 
-                      <div className="bg-[#FFF9F5] p-5 rounded-2xl border border-[#F5E6DA] space-y-2">
+                      <div className="bg-[#FFF9F5] p-5 rounded-none border border-[#F5E6DA] space-y-2">
                         <span className="text-xs font-bold uppercase text-[#B1742F]">Initiation & Visionaries</span>
                         <h4 className="text-lg font-bold text-gray-800">Established in 2013</h4>
                         <p className="text-sm text-gray-600">
@@ -190,7 +190,7 @@ const SchoolProfile = () => {
                     </div>
 
                     {/* Motto Story Card */}
-                    <div className="relative overflow-hidden bg-gradient-to-br from-[#FFF7E6] to-[#FFF1D8] p-6 rounded-3xl border-2 border-yellow-300">
+                    <div className="relative overflow-hidden bg-gradient-to-br from-[#FFF7E6] to-[#FFF1D8] p-6 rounded-none border-2 border-yellow-300">
                       <div className="absolute top-4 right-4 opacity-10">
                         <LuCompass className="w-24 h-24 text-yellow-600" />
                       </div>
@@ -248,13 +248,13 @@ const SchoolProfile = () => {
 
                     {/* Vision & Mission */}
                     <div id="mission" className="grid grid-cols-1 md:grid-cols-2 gap-6 border-t border-gray-100 pt-6">
-                      <div className="bg-red-50/50 p-6 rounded-2xl border border-red-100">
+                      <div className="bg-red-50/50 p-6 rounded-none border border-red-100">
                         <h4 className="text-lg font-bold text-[#800E13] mb-2">Our Vision</h4>
                         <p className="text-gray-700 text-sm leading-relaxed">
                           &ldquo;At the helm of producing Competent, Responsible, Self-Reliant and Flexible Citizens.&rdquo;
                         </p>
                       </div>
-                      <div className="bg-yellow-50/30 p-6 rounded-2xl border border-yellow-100">
+                      <div className="bg-yellow-50/30 p-6 rounded-none border border-yellow-100">
                         <h4 className="text-lg font-bold text-[#B1742F] mb-2">Our Mission</h4>
                         <p className="text-gray-700 text-sm leading-relaxed">
                           &ldquo;To provide Quality Holistic Education that Fosters Creativity, Critical thinking and Collaboration to Produce Competent Global Citizens.&rdquo;
@@ -267,7 +267,7 @@ const SchoolProfile = () => {
                       <h4 className="text-lg font-bold text-gray-800 mb-4">Core Values</h4>
                       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                         {coreValues.map((value, i) => (
-                          <div key={i} className="p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:border-yellow-300 transition-colors">
+                          <div key={i} className="p-4 bg-white rounded-none border border-gray-100 shadow-sm hover:border-yellow-300 transition-colors">
                             <span className="text-[#800E13] font-bold text-lg block mb-1">0{i+1}. {value.name}</span>
                             <span className="text-xs text-gray-500">{value.desc}</span>
                           </div>
@@ -286,7 +286,7 @@ const SchoolProfile = () => {
                       <p className="text-gray-500">Combining national curriculum excellence with modern digital instruction.</p>
                     </div>
 
-                    <div className="bg-[#FFF9F5] p-6 rounded-3xl border border-[#F5E6DA] space-y-4">
+                    <div className="bg-[#FFF9F5] p-6 rounded-none border border-[#F5E6DA] space-y-4">
                       <h4 className="text-xl font-bold text-gray-800">Curriculum Offered</h4>
                       <p className="text-gray-700 text-sm leading-relaxed">
                         Gombe Junior School is a National School applying international practices. We offer a <strong className="text-gray-800">UNEB Curriculum</strong> that centers on the 4 major subjects for PLE, while incorporating language instruction in Swahili, French, and Luganda.
@@ -298,7 +298,7 @@ const SchoolProfile = () => {
 
                     {/* Interactive lower school & ICT */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm space-y-2">
+                      <div className="bg-white p-5 rounded-none border border-gray-100 shadow-sm space-y-2">
                         <div className="flex items-center gap-2 mb-2 text-[#4FB8FF]">
                           <LuActivity className="w-5 h-5" />
                           <h5 className="font-bold text-gray-800">ICT Integration</h5>
@@ -308,7 +308,7 @@ const SchoolProfile = () => {
                         </p>
                       </div>
 
-                      <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm space-y-2">
+                      <div className="bg-white p-5 rounded-none border border-gray-100 shadow-sm space-y-2">
                         <div className="flex items-center gap-2 mb-2 text-[#5FD068]">
                           <LuCheck className="w-5 h-5" />
                           <h5 className="font-bold text-gray-800">Interactive Lower School</h5>
@@ -320,7 +320,7 @@ const SchoolProfile = () => {
                     </div>
 
                     {/* Workbooks info */}
-                    <div className="bg-blue-50/50 p-6 rounded-2xl border border-blue-100 space-y-2">
+                    <div className="bg-blue-50/50 p-6 rounded-none border border-blue-100 space-y-2">
                       <h5 className="font-bold text-blue-900">Custom Workbooks</h5>
                       <p className="text-xs text-blue-800 leading-relaxed">
                         We compile and design custom workbooks focusing on designated learning areas as provided by the Ministry of Education and Sports. These workbooks are compiled by our competent staff for the 4 core subjects and supported by other supplementary books for research and revision.
@@ -335,17 +335,17 @@ const SchoolProfile = () => {
                       </h4>
 
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <div className="bg-yellow-50/50 p-4 rounded-xl border border-yellow-100 text-center">
+                        <div className="bg-yellow-50/50 p-4 rounded-none border border-yellow-100 text-center">
                           <span className="text-3xl font-extrabold text-[#B1742F] block">90%+</span>
                           <span className="text-xs text-gray-600">Division One rate across 12 years of PLE</span>
                         </div>
 
-                        <div className="bg-red-50/50 p-4 rounded-xl border border-red-100 text-center">
+                        <div className="bg-red-50/50 p-4 rounded-none border border-red-100 text-center">
                           <span className="text-3xl font-extrabold text-[#800E13] block">100%</span>
                           <span className="text-xs text-gray-600">Division 1 in 2017 & 2022 (Ranked #3 & #5 Nationwide)</span>
                         </div>
 
-                        <div className="bg-green-50/50 p-4 rounded-xl border border-green-100 text-center">
+                        <div className="bg-green-50/50 p-4 rounded-none border border-green-100 text-center">
                           <span className="text-3xl font-extrabold text-green-700 block">#14</span>
                           <span className="text-xs text-gray-600">Nationwide in National Math Contest (Top 10-Yr average)</span>
                         </div>
@@ -380,7 +380,7 @@ const SchoolProfile = () => {
                         { label: 'Boardroom', count: '1' },
                         { label: 'Sick Bay', count: '1' },
                       ].map((item, i) => (
-                        <div key={i} className="p-4 bg-gray-50 rounded-xl border border-gray-100 flex items-center justify-between">
+                        <div key={i} className="p-4 bg-gray-50 rounded-none border border-gray-100 flex items-center justify-between">
                           <span className="text-sm font-semibold text-gray-700">{item.label}</span>
                           <span className="bg-[#800E13] text-white text-xs font-bold px-2 py-1 rounded-full">{item.count}</span>
                         </div>
@@ -402,7 +402,7 @@ const SchoolProfile = () => {
 
                     {/* Security & Backup */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 border-t border-gray-100 pt-6">
-                      <div className="bg-red-50/50 p-6 rounded-2xl border border-red-100 flex items-start gap-4">
+                      <div className="bg-red-50/50 p-6 rounded-none border border-red-100 flex items-start gap-4">
                         <LuShield className="w-8 h-8 text-[#800E13] flex-shrink-0 mt-1" />
                         <div>
                           <h5 className="font-bold text-[#800E13] mb-1">CCTV Camera Surveillance</h5>
@@ -412,7 +412,7 @@ const SchoolProfile = () => {
                         </div>
                       </div>
 
-                      <div className="bg-yellow-50/30 p-6 rounded-2xl border border-yellow-100 flex items-start gap-4">
+                      <div className="bg-yellow-50/30 p-6 rounded-none border border-yellow-100 flex items-start gap-4">
                         <LuCheck className="w-8 h-8 text-yellow-600 flex-shrink-0 mt-1" />
                         <div>
                           <h5 className="font-bold text-[#B1742F] mb-1">Backup & Utilities</h5>
@@ -424,7 +424,7 @@ const SchoolProfile = () => {
                     </div>
 
                     {/* Basic Items */}
-                    <div className="bg-[#FFF9F5] p-5 rounded-2xl border border-[#F5E6DA]">
+                    <div className="bg-[#FFF9F5] p-5 rounded-none border border-[#F5E6DA]">
                       <h5 className="font-bold text-gray-800 mb-2">Basic Items Provided / Required</h5>
                       <p className="text-xs text-gray-600 leading-relaxed">
                         Primary items found at the school include: Mattress, Bucket, Box File, and custom workbooks compiled by the school.
@@ -442,7 +442,7 @@ const SchoolProfile = () => {
                       <p className="text-gray-500">Fostering talent and teamwork outside the classroom.</p>
                     </div>
 
-                    <div className="bg-yellow-50/40 p-6 rounded-3xl border border-yellow-200">
+                    <div className="bg-yellow-50/40 p-6 rounded-none border border-yellow-200">
                       <div className="flex items-center gap-2 mb-2 text-yellow-700">
                         <LuClock className="w-5 h-5" />
                         <h4 className="font-bold text-gray-800">Activity Timing</h4>
@@ -454,7 +454,7 @@ const SchoolProfile = () => {
 
                     {/* Sports & Clubs lists */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                      <div className="bg-white p-6 rounded-none border border-gray-100 shadow-sm">
                         <h5 className="font-bold text-[#800E13] mb-3 pb-2 border-b border-gray-100">Sports & Games</h5>
                         <ul className="grid grid-cols-2 gap-2 text-xs text-gray-600">
                           <li>⚽ Football</li>
@@ -468,7 +468,7 @@ const SchoolProfile = () => {
                         </ul>
                       </div>
 
-                      <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                      <div className="bg-white p-6 rounded-none border border-gray-100 shadow-sm">
                         <h5 className="font-bold text-[#800E13] mb-3 pb-2 border-b border-gray-100">Student Clubs</h5>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-600">
                           {clubs.map((club, idx) => (
@@ -502,7 +502,7 @@ const SchoolProfile = () => {
                         We have a highly trained and qualified staff including teachers, secretaries, nurses, bursars, matrons, night/day guards, drivers, cooks, chef, ICT officers, procurement officers, and sanitation managers.
                       </p>
                       
-                      <div className="bg-[#FFF9F5] p-5 rounded-2xl border border-[#F5E6DA]">
+                      <div className="bg-[#FFF9F5] p-5 rounded-none border border-[#F5E6DA]">
                         <span className="text-[#800E13] font-bold text-sm block mb-3">Administrative Team Structure</span>
                         <div className="grid grid-cols-2 gap-3 text-xs text-gray-600">
                           <span>👤 Principal</span>
@@ -516,7 +516,7 @@ const SchoolProfile = () => {
                     </div>
 
                     {/* Health Services */}
-                    <div className="bg-red-50/50 p-6 rounded-2xl border border-red-100 flex items-start gap-4 border-t border-gray-100 pt-6">
+                    <div className="bg-red-50/50 p-6 rounded-none border border-red-100 flex items-start gap-4 border-t border-gray-100 pt-6">
                       <LuActivity className="w-8 h-8 text-[#800E13] mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-bold text-[#800E13] mb-1">Health Services</h4>
@@ -555,7 +555,7 @@ const SchoolProfile = () => {
                     </div>
 
                     {/* Religious functions */}
-                    <div className="bg-[#FFF9F5] p-5 rounded-2xl border border-[#F5E6DA] space-y-2">
+                    <div className="bg-[#FFF9F5] p-5 rounded-none border border-[#F5E6DA] space-y-2">
                       <h5 className="font-bold text-gray-800">Religious Support</h5>
                       <p className="text-xs text-gray-600 leading-relaxed">
                         GJS is multi-denominational. We prepare Christian pupils for sacramental orders and invite Bishops annually for confirmation. For Muslim learners, we facilitate fasting during Ramadhan by preparing Daku and breaking-of-fast meals.
@@ -579,7 +579,7 @@ const SchoolProfile = () => {
 
                     <div className="space-y-3">
                       {sisterSchools.map((school, idx) => (
-                        <div key={idx} className="p-4 bg-gray-50 hover:bg-[#FFF9F5] rounded-2xl border border-gray-100 flex items-center justify-between gap-4 transition-colors">
+                        <div key={idx} className="p-4 bg-gray-50 hover:bg-[#FFF9F5] rounded-none border border-gray-100 flex items-center justify-between gap-4 transition-colors">
                           <div>
                             <span className="text-xs font-bold text-gray-400 block">Institution 0{idx+1}</span>
                             <span className="font-bold text-gray-800 text-sm sm:text-base">{school.name}</span>
@@ -600,7 +600,7 @@ const SchoolProfile = () => {
         </div>
 
         {/* Conclusion / Footer Statement */}
-        <section className="mt-12 bg-white border border-[#F0E4D8] rounded-[32px] p-8 text-center shadow-lg">
+        <section className="mt-12 bg-white border border-[#F0E4D8] rounded-none p-8 text-center shadow-lg">
           <p className="text-[#800E13] font-bold text-xl mb-3">Home Away From Home</p>
           <p className="text-sm text-gray-600 max-w-4xl mx-auto leading-relaxed">
             &ldquo;As a school that has served in the field of Education for the last thirteen years, we remain committed to providing quality service delivery, to make learning conducive and with an impact to students, nurturing discipline and making the School a home away from home.&rdquo;

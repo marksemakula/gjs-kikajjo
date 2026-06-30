@@ -419,7 +419,7 @@ const GJSKikajjo = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative rounded-3xl overflow-hidden shadow-2xl group"
+              className="relative overflow-hidden shadow-2xl group"
               style={{ border: `4px solid ${brandColors.primary}` }}
             >
               <Link to="/gallery" className="block w-full h-full">
@@ -440,7 +440,7 @@ const GJSKikajjo = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative rounded-3xl overflow-hidden shadow-2xl"
+              className="relative overflow-hidden shadow-2xl"
               style={{ border: `4px solid ${brandColors.secondary}` }}
             >
               <video 
@@ -504,7 +504,7 @@ const GJSKikajjo = () => {
                   whileHover={{ y: -10, scale: 1.02 }}
                   className="bg-white p-8 shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden"
                   style={{
-                    borderRadius: '30px',
+                    borderRadius: '0px',
                     backgroundColor: program.bgColor
                   }}
                 >

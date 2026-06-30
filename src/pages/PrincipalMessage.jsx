@@ -22,7 +22,7 @@ const PrincipalMessage = () => {
       </header>
 
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <section className="rounded-[32px] border border-[#F0E4D8] bg-white shadow-[0_40px_120px_rgba(128,14,19,0.06)] p-8 sm:p-12">
+        <section className="rounded-none border border-[#F0E4D8] bg-white shadow-[0_40px_120px_rgba(128,14,19,0.06)] p-8 sm:p-12">
           <div className="mb-8">
             <p className="inline-flex items-center rounded-full bg-[#FFF1D8] px-4 py-2 text-sm font-semibold uppercase tracking-[0.18em] text-[#B1742F]">
               A message from the Principal
@@ -44,7 +44,7 @@ const PrincipalMessage = () => {
               As any School which Looks at a holistic approach of Education we also look at the psychomotor, we as Gombe Junior School look at developing Children’s talents and skills. This is done through enabling children to choose clubs which can promote their talents and skills. Among clubs here we have Soccer academy, Piano Club, Violin Club, MDD, Food and Nutrition, Chess Club, Netball Club, Happy Kids, Scouts, Robotics just to mention but a few. Our School normally spares an hour in week days and two hours over weekends to help children develop their talents. We however as a school allow children to swim once a week. Swimming in our School is a given for the children in our School and we do not pay for this service because we regard it as one of our take home for all children in our School.
             </p>
 
-            <div className="rounded-3xl border border-[#F4E2C9] bg-[#FFF5E2] p-5">
+            <div className="rounded-none border border-[#F4E2C9] bg-[#FFF5E2] p-5">
               <p className="font-semibold text-[#800E13] mb-3">Clubs and activities include:</p>
               <ul className="list-disc list-inside space-y-2 text-[#3D2D25]">
                 <li>Soccer Academy</li>
