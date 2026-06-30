@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   LuArrowLeft, LuMapPin, LuPhone, LuMail, LuAward, LuBookOpen, 
@@ -14,7 +14,21 @@ const SchoolProfile = () => {
     cream: '#FFF9F5',
   };
 
+  const location = useLocation();
   const [activeTab, setActiveTab] = useState('identity');
+
+  useEffect(() => {
+    if (location.hash === '#mission' || location.hash === '#core-values') {
+      setActiveTab('identity');
+      setTimeout(() => {
+        const id = location.hash.substring(1);
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 100);
+    }
+  }, [location]);
 
   const tabs = [
     { id: 'identity', label: 'Identity & History', icon: LuCompass },
@@ -233,7 +247,7 @@ const SchoolProfile = () => {
                     </div>
 
                     {/* Vision & Mission */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 border-t border-gray-100 pt-6">
+                    <div id="mission" className="grid grid-cols-1 md:grid-cols-2 gap-6 border-t border-gray-100 pt-6">
                       <div className="bg-red-50/50 p-6 rounded-2xl border border-red-100">
                         <h4 className="text-lg font-bold text-[#800E13] mb-2">Our Vision</h4>
                         <p className="text-gray-700 text-sm leading-relaxed">
@@ -249,7 +263,7 @@ const SchoolProfile = () => {
                     </div>
 
                     {/* Core Values */}
-                    <div className="border-t border-gray-100 pt-6">
+                    <div id="core-values" className="border-t border-gray-100 pt-6">
                       <h4 className="text-lg font-bold text-gray-800 mb-4">Core Values</h4>
                       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                         {coreValues.map((value, i) => (

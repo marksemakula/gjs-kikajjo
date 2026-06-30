@@ -14,9 +14,9 @@ const navItems = [
     label: 'About Us',
     dropdown: [
       { label: 'School Profile', href: '/about/school-profile' },
-      { label: 'Mission & Vision', href: '/about/mission-vision' },
-      { label: 'Core Values', href: '/about/core-values' },
-      { label: 'Board of Governors', href: '/about/board-of-governors' },
+      { label: 'Mission & Vision', href: '/about/school-profile#mission' },
+      { label: 'Core Values', href: '/about/school-profile#core-values' },
+      { label: 'School Management Committee', href: '/about/management-committee' },
       { label: "Principal's Message", href: '/about/principals-message' },
       { label: 'Administration and Management Team', href: '/about/management-team' },
     ],
