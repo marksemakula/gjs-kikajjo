@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Marquee from 'react-fast-marquee';
 import { motion } from 'framer-motion';
 import { LuMapPin, LuPhone, LuMail, LuMenu, LuX, LuChevronDown, LuArrowRight } from 'react-icons/lu';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
 
 const gjsPics = [
   '/GJS%20Pics/GOMBE%20HIGH%20SCHOOL.jpg',
@@ -136,6 +136,11 @@ const GJSKikajjo = () => {
       title: 'National Curriculum',
       description: 'Uganda National Curriculum integrated with international standards for P1-P7.',
       features: ['Primary (P1-P7)', 'Life Skills', 'Competency-Based'],
+    },
+    {
+      title: 'Co-Curricular Activities',
+      description: 'A vibrant programme of activities that develops teamwork, discipline, and well-rounded learners.',
+      features: ['Sports & Athletics', 'Clubs & Societies', 'Music, Dance & Drama', 'Debates & Public Speaking'],
     },
   ];
 
@@ -506,15 +511,12 @@ const GJSKikajjo = () => {
             <p className="text-sm font-semibold tracking-widest uppercase mb-3" style={{ color: brand.gold }}>
               Our Programs
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: brand.ink }}>
-              A Strong Academic Foundation
+            <h2 className="text-3xl md:text-4xl font-bold" style={{ color: brand.ink }}>
+              We Offer World-Class Education Programs
             </h2>
-            <p className="text-lg text-gray-600">
-              We meet learners at their level with programs designed for excellence at every stage.
-            </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {programs.map((program, index) => (
               <motion.div
                 key={index}
@@ -690,6 +692,23 @@ const GJSKikajjo = () => {
           </div>
         </div>
       </footer>
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/256708800003"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+        className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full shadow-lg transition-transform hover:scale-110"
+        style={{ backgroundColor: '#25D366' }}
+      >
+        <FaWhatsapp className="w-7 h-7 text-white" />
+        {/* Pulse ring */}
+        <span
+          className="absolute inset-0 rounded-full animate-ping opacity-30"
+          style={{ backgroundColor: '#25D366' }}
+        />
+      </a>
     </div>
   );
 };
