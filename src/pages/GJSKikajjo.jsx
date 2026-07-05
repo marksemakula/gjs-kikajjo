@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Marquee from 'react-fast-marquee';
 import { motion } from 'framer-motion';
 import { LuMapPin, LuPhone, LuMail, LuMenu, LuX, LuChevronDown, LuArrowRight } from 'react-icons/lu';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaTiktok, FaWhatsapp } from 'react-icons/fa';
 
 const gjsPics = [
   '/GJS%20Pics/GOMBE%20HIGH%20SCHOOL.jpg',
@@ -555,12 +555,9 @@ const GJSKikajjo = () => {
             <p className="text-sm font-semibold tracking-widest uppercase mb-3" style={{ color: brand.gold }}>
               Admissions Open
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Join the Gombe Junior School Community
+            <h2 className="text-3xl md:text-4xl font-bold mb-10">
+              Give Your Child a Strong Start with Quality Education at Our Kikajjo Campus.
             </h2>
-            <p className="text-lg text-gray-200 mb-10">
-              Give your child a strong start with quality education at our Kikajjo Campus.
-            </p>
             <div className="flex flex-wrap justify-center gap-x-10 gap-y-4 mb-10 text-sm text-gray-200">
               <div className="flex items-center gap-2">
                 <LuMapPin className="w-4 h-4" style={{ color: brand.gold }} />
@@ -568,11 +565,11 @@ const GJSKikajjo = () => {
               </div>
               <div className="flex items-center gap-2">
                 <LuPhone className="w-4 h-4" style={{ color: brand.gold }} />
-                <span>0708 800 002 / 0708 800 004</span>
+                <span>+256708800001 / +256708800003</span>
               </div>
               <div className="flex items-center gap-2">
                 <LuMail className="w-4 h-4" style={{ color: brand.gold }} />
-                <span>info@gjs.ges.ac.ug</span>
+                <span>gombejuniorschool@gmail.com</span>
               </div>
             </div>
             <Link
@@ -604,8 +601,7 @@ const GJSKikajjo = () => {
                 </h3>
               </div>
               <p className="text-sm text-gray-300 leading-relaxed">
-                Providing quality primary education with a focus on holistic development,
-                strong values, and academic excellence.
+                A centre for holistic education.
               </p>
             </div>
 
@@ -617,11 +613,11 @@ const GJSKikajjo = () => {
               <div className="space-y-3 text-sm text-gray-300">
                 <div className="flex items-start gap-3">
                   <LuMail className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: brand.gold }} />
-                  <span>info@gjs.ges.ac.ug</span>
+                  <span>gombejuniorschool@gmail.com</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <LuPhone className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: brand.gold }} />
-                  <span>0708 800 002 / 0708 800 004</span>
+                  <span>+256708800001 / +256708800003</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <LuMapPin className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: brand.gold }} />
@@ -660,16 +656,25 @@ const GJSKikajjo = () => {
               <h4 className="text-sm font-semibold tracking-widest uppercase mb-4" style={{ color: brand.gold }}>
                 Follow Us
               </h4>
-              <div className="flex gap-3">
-                {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn].map((Icon, i) => (
-                  <a
-                    key={i}
-                    href="#"
-                    className="w-9 h-9 rounded-md bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
-                  >
-                    <Icon className="w-4 h-4" />
-                  </a>
-                ))}
+              <div className="flex flex-wrap gap-3">
+                <a href="https://www.facebook.com/share/14pffgQyCPv/2" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-md bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors" aria-label="Facebook">
+                  <FaFacebookF className="w-4 h-4" />
+                </a>
+                <a href="https://x.com/GombeJuniorSch" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-md bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors" aria-label="X (Twitter)">
+                  <FaTwitter className="w-4 h-4" />
+                </a>
+                <a href="https://www.instagram.com/gombejuniorschool?igsh=aDF3ZzBwcnkwYzg0" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-md bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors" aria-label="Instagram">
+                  <FaInstagram className="w-4 h-4" />
+                </a>
+                <a href="https://youtube.com/@gombejuniorschool5546?si=nx4FVnOLfe0PBXVs" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-md bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors" aria-label="YouTube">
+                  <FaYoutube className="w-4 h-4" />
+                </a>
+                <a href="https://www.tiktok.com/@gombejuniorschool?_r=1&_t=ZS-97XNheFCTyx" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-md bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors" aria-label="TikTok">
+                  <FaTiktok className="w-4 h-4" />
+                </a>
+                <a href="https://wa.me/256708800003" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-md bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors" aria-label="WhatsApp">
+                  <FaWhatsapp className="w-4 h-4" />
+                </a>
               </div>
             </div>
           </div>
