@@ -170,14 +170,14 @@ const SchoolProfile = () => {
                   <div className="space-y-8">
                     <div>
                       <h3 className="text-3xl font-bold text-[#800E13] mb-2">School Identity</h3>
-                      <p className="text-gray-500">The foundation, location, and beliefs that define our boarding school.</p>
+                      <p className="text-gray-500">The foundation, location, and beliefs that define our mixed day & boarding school.</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="bg-[#FFF9F5] p-5 rounded-none border border-[#F5E6DA] space-y-2">
                         <span className="text-xs font-bold uppercase text-[#B1742F]">Nature of School</span>
-                        <h4 className="text-lg font-bold text-gray-800">Boarding Primary School</h4>
-                        <p className="text-sm text-gray-600">Gombe Junior School is purely a boarding primary school environment structured to provide a home away from home.</p>
+                        <h4 className="text-lg font-bold text-gray-800">Mixed Day & Boarding Primary School</h4>
+                        <p className="text-sm text-gray-600">Gombe Junior School is a primary school environment structured to provide a home away from home.</p>
                       </div>
 
                       <div className="bg-[#FFF9F5] p-5 rounded-none border border-[#F5E6DA] space-y-2">
