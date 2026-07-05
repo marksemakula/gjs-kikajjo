@@ -374,7 +374,7 @@ const GJSKikajjo = () => {
                 className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 mb-8 text-xs font-semibold tracking-widest uppercase"
                 style={{ borderColor: `${brand.gold}80`, color: brand.gold }}
               >
-                Day &amp; Boarding &middot; Primary Education
+                Mixed Day &amp; Boarding &middot; Primary Education
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
                 Gombe Junior School
