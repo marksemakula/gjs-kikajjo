@@ -74,7 +74,7 @@ const GJSKikajjo = () => {
         { label: 'Academic Program', href: '#academic-program' },
         { label: 'Curriculum - Subjects', href: '#curriculum' },
         { label: 'Departments', href: '#departments' },
-        { label: 'UNEB Results - Archives', href: '#uned-results' },
+        { label: 'UNEB Results Archive', route: '/academics/uneb-results' },
       ],
     },
     {
@@ -168,11 +168,11 @@ const GJSKikajjo = () => {
           <div className="flex items-center gap-6">
             <span className="hidden sm:flex items-center gap-2">
               <LuPhone className="w-3.5 h-3.5" style={{ color: brand.gold }} />
-              0708 800 002 / 0708 800 004
+              +256708800001 / +256708800003
             </span>
             <span className="flex items-center gap-2">
               <LuMail className="w-3.5 h-3.5" style={{ color: brand.gold }} />
-              info@gjs.ges.ac.ug
+              gombejuniorschool@gmail.com
             </span>
           </div>
           <span className="hidden md:flex items-center gap-2">
