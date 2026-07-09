@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import GJSKikajjo from './pages/GJSKikajjo';
+import CampusSelector from './components/CampusSelector';
 import GalleryPage from './pages/GalleryPage';
 import ApplyPage from './pages/admissions/ApplyPage';
 import FeesPage from './pages/admissions/FeesPage';
@@ -14,6 +15,7 @@ import './App.css';
 function App() {
   return (
     <BrowserRouter>
+      <CampusSelector />
       <Routes>
         <Route path="/" element={<GJSKikajjo />} />
         <Route path="/gallery" element={<GalleryPage />} />
