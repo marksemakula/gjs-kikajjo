@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   LuArrowLeft,
@@ -11,31 +11,49 @@ import {
   LuImages,
 } from 'react-icons/lu';
 
+/* Sub-categories mirror the School Facilities listing on the About Us page.
+   Tag each image with a `category` slug to have it appear under that filter. */
+const galleryCategories = [
+  { slug: 'all',            label: 'All Photos'       },
+  { slug: 'campus',         label: 'Campus & Grounds' },
+  { slug: 'classrooms',     label: 'Classrooms'       },
+  { slug: 'dormitories',    label: 'Dormitories'      },
+  { slug: 'music-rooms',    label: 'Music Rooms'      },
+  { slug: 'ict-lab',        label: 'ICT Lab'          },
+  { slug: 'library',        label: 'Library'          },
+  { slug: 'home-economics', label: 'Home Economics'   },
+  { slug: 'offices',        label: 'Offices'          },
+  { slug: 'boardroom',      label: 'Boardroom'        },
+  { slug: 'sick-bay',       label: 'Sick Bay'         },
+  { slug: 'sports',         label: 'Sports Facilities'},
+  { slug: 'moments',        label: 'School Moments'   },
+];
+
 const galleryImages = [
-  { src: '/GJS%20Pics/GOMBE%20HIGH%20SCHOOL.jpg',          caption: 'Gombe High School'         },
-  { src: '/GJS%20Pics/GOMBE%20JUNIOR%20SCHOOL%20KIKAJJO.JPG', caption: 'GJS Kikajjo Campus'    },
-  { src: '/GJS%20Pics/GOMBE%20JUNIOR%20SCHOOL%20DAY.jpg',  caption: 'GJS Day Life'              },
-  { src: '/GJS%20Pics/IMG_0069.JPG',  caption: 'School Moments' },
-  { src: '/GJS%20Pics/IMG_1378.JPG',  caption: 'School Moments' },
-  { src: '/GJS%20Pics/IMG_1678.JPG',  caption: 'School Moments' },
-  { src: '/GJS%20Pics/IMG_1685.JPG',  caption: 'School Moments' },
-  { src: '/GJS%20Pics/IMG_1690.JPG',  caption: 'School Moments' },
-  { src: '/GJS%20Pics/IMG_1697.JPG',  caption: 'School Moments' },
-  { src: '/GJS%20Pics/IMG_1707.JPG',  caption: 'School Moments' },
-  { src: '/GJS%20Pics/IMG_1708.JPG',  caption: 'School Moments' },
-  { src: '/GJS%20Pics/IMG_1737.JPG',  caption: 'School Moments' },
-  { src: '/GJS%20Pics/IMG_1747.JPG',  caption: 'School Moments' },
-  { src: '/GJS%20Pics/IMG_1764.JPG',  caption: 'School Moments' },
-  { src: '/GJS%20Pics/IMG_1768.JPG',  caption: 'School Moments' },
-  { src: '/GJS%20Pics/IMG_2804.JPG',  caption: 'School Moments' },
-  { src: '/GJS%20Pics/IMG_5387.JPG',  caption: 'School Moments' },
-  { src: '/GJS%20Pics/IMG_7534.JPG',  caption: 'School Moments' },
-  { src: '/GJS%20Pics/IMG_7541.JPG',  caption: 'School Moments' },
-  { src: '/GJS%20Pics/IMG_7542.JPG',  caption: 'School Moments' },
-  { src: '/GJS%20Pics/IMG_7544.JPG',  caption: 'School Moments' },
-  { src: '/GJS%20Pics/IMG_8873.JPG',  caption: 'School Moments' },
-  { src: '/GJS%20Pics/IMG_8893.JPG',  caption: 'School Moments' },
-  { src: '/GJS%20Pics/IMG_8912.JPG',  caption: 'School Moments' },
+  { src: '/GJS%20Pics/GOMBE%20HIGH%20SCHOOL.jpg',          caption: 'Gombe High School',   category: 'campus'  },
+  { src: '/GJS%20Pics/GOMBE%20JUNIOR%20SCHOOL%20KIKAJJO.JPG', caption: 'GJS Kikajjo Campus', category: 'campus' },
+  { src: '/GJS%20Pics/GOMBE%20JUNIOR%20SCHOOL%20DAY.jpg',  caption: 'GJS Day Life',        category: 'campus'  },
+  { src: '/GJS%20Pics/IMG_0069.JPG',  caption: 'School Moments', category: 'moments' },
+  { src: '/GJS%20Pics/IMG_1378.JPG',  caption: 'School Moments', category: 'moments' },
+  { src: '/GJS%20Pics/IMG_1678.JPG',  caption: 'School Moments', category: 'moments' },
+  { src: '/GJS%20Pics/IMG_1685.JPG',  caption: 'School Moments', category: 'moments' },
+  { src: '/GJS%20Pics/IMG_1690.JPG',  caption: 'School Moments', category: 'moments' },
+  { src: '/GJS%20Pics/IMG_1697.JPG',  caption: 'School Moments', category: 'moments' },
+  { src: '/GJS%20Pics/IMG_1707.JPG',  caption: 'School Moments', category: 'moments' },
+  { src: '/GJS%20Pics/IMG_1708.JPG',  caption: 'School Moments', category: 'moments' },
+  { src: '/GJS%20Pics/IMG_1737.JPG',  caption: 'School Moments', category: 'moments' },
+  { src: '/GJS%20Pics/IMG_1747.JPG',  caption: 'School Moments', category: 'moments' },
+  { src: '/GJS%20Pics/IMG_1764.JPG',  caption: 'School Moments', category: 'moments' },
+  { src: '/GJS%20Pics/IMG_1768.JPG',  caption: 'School Moments', category: 'moments' },
+  { src: '/GJS%20Pics/IMG_2804.JPG',  caption: 'School Moments', category: 'moments' },
+  { src: '/GJS%20Pics/IMG_5387.JPG',  caption: 'School Moments', category: 'moments' },
+  { src: '/GJS%20Pics/IMG_7534.JPG',  caption: 'School Moments', category: 'moments' },
+  { src: '/GJS%20Pics/IMG_7541.JPG',  caption: 'School Moments', category: 'moments' },
+  { src: '/GJS%20Pics/IMG_7542.JPG',  caption: 'School Moments', category: 'moments' },
+  { src: '/GJS%20Pics/IMG_7544.JPG',  caption: 'School Moments', category: 'moments' },
+  { src: '/GJS%20Pics/IMG_8873.JPG',  caption: 'School Moments', category: 'moments' },
+  { src: '/GJS%20Pics/IMG_8893.JPG',  caption: 'School Moments', category: 'moments' },
+  { src: '/GJS%20Pics/IMG_8912.JPG',  caption: 'School Moments', category: 'moments' },
 ];
 
 const BURGUNDY = '#800E13';
@@ -55,8 +73,22 @@ const itemVariants = {
 export default function GalleryPage() {
   const [lightboxIndex, setLightboxIndex] = useState(null);
   const [imgDirection, setImgDirection]   = useState(0); // -1 left, 1 right
+  const [searchParams, setSearchParams]   = useSearchParams();
 
-  const isOpen = lightboxIndex !== null;
+  const categoryParam  = searchParams.get('category') || 'all';
+  const activeCategory = galleryCategories.some(c => c.slug === categoryParam) ? categoryParam : 'all';
+  const activeLabel    = galleryCategories.find(c => c.slug === activeCategory)?.label || 'All Photos';
+
+  const filteredImages = activeCategory === 'all'
+    ? galleryImages
+    : galleryImages.filter(img => img.category === activeCategory);
+
+  const selectCategory = (slug) => {
+    setLightboxIndex(null);
+    setSearchParams(slug === 'all' ? {} : { category: slug });
+  };
+
+  const isOpen = lightboxIndex !== null && filteredImages.length > 0;
 
   const openLightbox = (index) => {
     setImgDirection(0);
@@ -67,13 +99,13 @@ export default function GalleryPage() {
 
   const prev = useCallback(() => {
     setImgDirection(-1);
-    setLightboxIndex(i => (i - 1 + galleryImages.length) % galleryImages.length);
-  }, []);
+    setLightboxIndex(i => (i - 1 + filteredImages.length) % filteredImages.length);
+  }, [filteredImages.length]);
 
   const next = useCallback(() => {
     setImgDirection(1);
-    setLightboxIndex(i => (i + 1) % galleryImages.length);
-  }, []);
+    setLightboxIndex(i => (i + 1) % filteredImages.length);
+  }, [filteredImages.length]);
 
   /* Keyboard navigation */
   useEffect(() => {
@@ -187,19 +219,56 @@ export default function GalleryPage() {
           <span>/</span>
           <span className="text-gray-400">Student's Life</span>
           <span>/</span>
-          <span className="font-medium" style={{ color: BURGUNDY }}>Images</span>
+          <span className="font-medium" style={{ color: BURGUNDY }}>{activeLabel}</span>
         </nav>
       </div>
 
+      {/* ── Category filters (mirrors School Facilities sub-categories) ── */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
+        <div className="flex flex-wrap gap-2">
+          {galleryCategories.map((cat) => {
+            const isActive = cat.slug === activeCategory;
+            return (
+              <button
+                key={cat.slug}
+                onClick={() => selectCategory(cat.slug)}
+                className="px-4 py-1.5 text-xs font-semibold rounded-full border transition-colors"
+                style={isActive
+                  ? { backgroundColor: BURGUNDY, borderColor: BURGUNDY, color: '#fff' }
+                  : { backgroundColor: '#fff', borderColor: '#e5e7eb', color: '#4b5563' }}
+              >
+                {cat.label}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
       {/* ── Masonry Gallery ────────────────────────────────── */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-16">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-16">
+        {filteredImages.length === 0 && (
+          <div className="text-center py-20 bg-white rounded-2xl border border-gray-100 shadow-sm">
+            <LuCamera className="w-10 h-10 mx-auto mb-4" style={{ color: BURGUNDY }} />
+            <h2 className="text-lg font-bold text-gray-800 mb-1">Photos of our {activeLabel} are on the way</h2>
+            <p className="text-sm text-gray-500 mb-6">We are curating images for this facility. Please check back shortly.</p>
+            <button
+              onClick={() => selectCategory('all')}
+              className="px-6 py-2.5 text-sm font-semibold text-white rounded-full transition-opacity hover:opacity-90"
+              style={{ backgroundColor: BURGUNDY }}
+            >
+              View All Photos
+            </button>
+          </div>
+        )}
+
         <motion.div
+          key={activeCategory}
           className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          {galleryImages.map((img, index) => (
+          {filteredImages.map((img, index) => (
             <motion.div
               key={index}
               className="break-inside-avoid mb-4 group relative rounded-2xl overflow-hidden cursor-pointer shadow-md"
@@ -263,7 +332,7 @@ export default function GalleryPage() {
 
             {/* Counter */}
             <div className="absolute top-4 left-1/2 -translate-x-1/2 z-10 text-white/70 text-sm font-medium bg-white/10 px-4 py-1.5 rounded-full select-none">
-              {lightboxIndex + 1} / {galleryImages.length}
+              {lightboxIndex + 1} / {filteredImages.length}
             </div>
 
             {/* Prev */}
@@ -279,8 +348,8 @@ export default function GalleryPage() {
             <AnimatePresence mode="wait" initial={false}>
               <motion.img
                 key={lightboxIndex}
-                src={galleryImages[lightboxIndex].src}
-                alt={galleryImages[lightboxIndex].caption}
+                src={filteredImages[lightboxIndex].src}
+                alt={filteredImages[lightboxIndex].caption}
                 className="max-h-[80vh] max-w-[80vw] object-contain rounded-xl shadow-2xl select-none"
                 initial={{ opacity: 0, x: imgDirection * 40, scale: 0.97 }}
                 animate={{ opacity: 1, x: 0, scale: 1 }}
@@ -302,7 +371,7 @@ export default function GalleryPage() {
 
             {/* Caption */}
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 text-white/80 text-sm font-medium bg-black/50 px-5 py-2 rounded-full whitespace-nowrap">
-              {galleryImages[lightboxIndex].caption}
+              {filteredImages[lightboxIndex].caption}
             </div>
           </motion.div>
         )}

@@ -367,23 +367,29 @@ const SchoolProfile = () => {
                       <p className="text-gray-500">Explore the resources that support comfortable living and learning.</p>
                     </div>
 
-                    {/* Facility counts */}
+                    {/* Facility links — each opens the relevant gallery category */}
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                       {[
-                        { label: 'Classrooms', count: '20' },
-                        { label: 'Dormitories', count: '7' },
-                        { label: 'Music Rooms', count: '2' },
-                        { label: 'ICT Lab', count: '1' },
-                        { label: 'Library', count: '1' },
-                        { label: 'Home Econ. Room', count: '1' },
-                        { label: 'Offices', count: '8' },
-                        { label: 'Boardroom', count: '1' },
-                        { label: 'Sick Bay', count: '1' },
+                        { label: 'Classrooms', slug: 'classrooms' },
+                        { label: 'Dormitories', slug: 'dormitories' },
+                        { label: 'Music Rooms', slug: 'music-rooms' },
+                        { label: 'ICT Lab', slug: 'ict-lab' },
+                        { label: 'Library', slug: 'library' },
+                        { label: 'Home Econ. Room', slug: 'home-economics' },
+                        { label: 'Offices', slug: 'offices' },
+                        { label: 'Boardroom', slug: 'boardroom' },
+                        { label: 'Sick Bay', slug: 'sick-bay' },
                       ].map((item, i) => (
-                        <div key={i} className="p-4 bg-gray-50 rounded-none border border-gray-100 flex items-center justify-between">
-                          <span className="text-sm font-semibold text-gray-700">{item.label}</span>
-                          <span className="bg-[#800E13] text-white text-xs font-bold px-2 py-1 rounded-full">{item.count}</span>
-                        </div>
+                        <Link
+                          key={i}
+                          to={`/gallery?category=${item.slug}`}
+                          className="p-4 bg-gray-50 rounded-none border border-gray-100 flex items-center justify-between group hover:border-[#800E13] hover:bg-red-50/40 transition-colors"
+                        >
+                          <span className="text-sm font-semibold text-gray-700 group-hover:text-[#800E13] transition-colors">{item.label}</span>
+                          <span className="text-[#800E13] text-xs font-bold flex items-center gap-1">
+                            View <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">→</span>
+                          </span>
+                        </Link>
                       ))}
                     </div>
 
@@ -398,6 +404,12 @@ const SchoolProfile = () => {
                         <span className="flex items-center gap-2">✓ Lawn Tennis Court</span>
                         <span className="flex items-center gap-2">✓ Kitchen & Water Pump</span>
                       </div>
+                      <Link
+                        to="/gallery?category=sports"
+                        className="inline-flex items-center gap-2 mt-4 text-sm font-semibold text-[#800E13] hover:underline"
+                      >
+                        View Sports Facilities in the Gallery →
+                      </Link>
                     </div>
 
                     {/* Security & Backup */}
