@@ -65,7 +65,7 @@ const GJSKikajjo = () => {
         { label: 'Core Values', route: '/about/school-profile#core-values' },
         { label: 'School Management Committee', route: '/about/management-committee' },
         { label: "Principal's Message", href: '#principals-message', route: '/principal-message' },
-        { label: 'Administration and Management Team', href: '#management' },
+        { label: 'Administration and Management Team', route: '/about/management-team' },
       ],
     },
     {
