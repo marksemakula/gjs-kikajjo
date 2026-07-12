@@ -49,10 +49,21 @@ const SchoolProfile = () => {
   ];
 
   const clubs = [
-    'Chess Club', 'Robotics', 'Scouts Club', 'Piano Club', 'Jazz Band Club',
-    'Violin Club', 'Guitar Club', 'Happy Kids Club', 'MDD Club',
-    'Food and Nutrition Club', 'Soccer Academy', 'Art and Crafts Club',
-    'Netball Club', 'Volleyball Club', 'Board Games Club'
+    { name: 'Chess Club',            category: 'moments'     },
+    { name: 'Robotics',              category: 'ict-lab'     },
+    { name: 'Scouts Club',           category: 'moments'     },
+    { name: 'Piano Club',            category: 'music-rooms' },
+    { name: 'Jazz Band Club',        category: 'music-rooms' },
+    { name: 'Violin Club',           category: 'music-rooms' },
+    { name: 'Guitar Club',           category: 'music-rooms' },
+    { name: 'Happy Kids Club',       category: 'moments'     },
+    { name: 'MDD Club',              category: 'moments'     },
+    { name: 'Food and Nutrition Club', category: 'home-economics' },
+    { name: 'Soccer Academy',        category: 'sports'      },
+    { name: 'Art and Crafts Club',   category: 'moments'     },
+    { name: 'Netball Club',          category: 'sports'      },
+    { name: 'Volleyball Club',       category: 'sports'      },
+    { name: 'Board Games Club',      category: 'moments'     },
   ];
 
   const sisterSchools = [
@@ -487,12 +498,16 @@ const SchoolProfile = () => {
 
                       <div className="bg-white p-6 rounded-none border border-gray-100 shadow-sm">
                         <h5 className="font-bold text-[#800E13] mb-3 pb-2 border-b border-gray-100">Student Clubs</h5>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-600">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                           {clubs.map((club, idx) => (
-                            <span key={idx} className="flex items-center gap-1.5">
-                              <span className="w-1.5 h-1.5 rounded-full bg-yellow-400" />
-                              {club}
-                            </span>
+                            <Link
+                              key={idx}
+                              to={`/gallery?category=${club.category}`}
+                              className="flex items-center gap-1.5 text-gray-600 hover:text-[#800E13] transition-colors group"
+                            >
+                              <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 group-hover:bg-[#800E13] transition-colors flex-shrink-0" />
+                              {club.name}
+                            </Link>
                           ))}
                         </div>
                       </div>

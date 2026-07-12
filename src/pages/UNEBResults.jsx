@@ -13,10 +13,52 @@ const brandColors = {
 
 const results = [
   {
+    year: '2019',
+    title: 'PLE Results 2019',
+    description: 'Primary Leaving Examinations results for the 2019 academic year. Ranked among the top 5 schools nationwide with 100% Division One.',
+    file: '/Resources/PLE RESULTS 20I9.docx',
+    highlight: '#5 Nationwide',
+  },
+  {
+    year: '2020',
+    title: 'PLE Results 2020',
+    description: 'Primary Leaving Examinations results for the 2020 academic year. Ranked among the top 5 schools nationwide with 100% Division One.',
+    file: '/Resources/PLE%20RESULTS%202020.docx',
+    highlight: '#5 Nationwide',
+  },
+  {
+    year: '2021',
+    title: 'PLE Results 2021',
+    description: 'Primary Leaving Examinations results for the 2021 academic year. Ranked among the top 5 schools nationwide with 100% Division One.',
+    file: '/Resources/PLE%20RESULTS%202021.docx',
+    highlight: '#5 Nationwide',
+  },
+  {
     year: '2022',
     title: 'PLE Results 2022',
     description: 'Primary Leaving Examinations results for the 2022 academic year. Ranked among the top 5 schools nationwide with 100% Division One.',
     file: '/Resources/PLE%20RESULTS%202022.docx',
+    highlight: '#5 Nationwide',
+  },
+  {
+    year: '2023',
+    title: 'PLE Results 2023',
+    description: 'Primary Leaving Examinations results for the 2023 academic year. Ranked among the top 5 schools nationwide with 100% Division One.',
+    file: '/Resources/PLE%20RESULTS%202023.docx',
+    highlight: '#5 Nationwide',
+  },
+  {
+    year: '2024',
+    title: 'PLE Results 2024',
+    description: 'Primary Leaving Examinations results for the 2024 academic year. Ranked among the top 5 schools nationwide with 100% Division One.',
+    file: '/Resources/PLE%20RESULTS%202024.docx',
+    highlight: '#5 Nationwide',
+  },
+  {
+    year: '2025',
+    title: 'PLE Results 2025',
+    description: 'Primary Leaving Examinations results for the 2025 academic year. Ranked among the top 5 schools nationwide with 100% Division One.',
+    file: '/Resources/PLE%20RESULTS%202025.docx',
     highlight: '#5 Nationwide',
   },
 ];
@@ -157,7 +199,7 @@ const UNEBResults = () => {
         {/* Note */}
         <div className="mt-12 bg-yellow-50/60 border border-yellow-200 rounded-lg p-6">
           <p className="text-sm text-gray-700 leading-relaxed">
-            <strong className="text-gray-800">Note:</strong> Results are published as provided by the Uganda National Examinations Board (UNEB). 
+            <strong className="text-gray-800">Note:</strong> Results are published as provided by the Uganda National Examinations Board (UNEB).
             For more information about our academic performance or to request additional years, please contact the school at{' '}
             <a href="mailto:gombejuniorschool@gmail.com" className="font-semibold underline" style={{ color: brandColors.secondary }}>
               gombejuniorschool@gmail.com
