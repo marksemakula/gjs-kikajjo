@@ -56,13 +56,14 @@ const SchoolProfile = () => {
   ];
 
   const sisterSchools = [
-    { name: 'Gombe Institute of Business, Science & Technology', loc: 'Kabalagala - Muzaana Zone, Kampala' },
-    { name: 'Gombe Junior School Kikajjo - Day School', loc: 'Kikajjo (Same Location)' },
-    { name: 'Scooby-Doo International School Uganda (SISU) - Katale', loc: 'Along Sseguku - Katale Rd' },
-    { name: 'Scooby-Doo International School Uganda (SISU) - Gulu', loc: 'Gulu City' },
-    { name: 'Gombe Junior School - Gulu', loc: 'Gulu City' },
-    { name: 'St. Andrew Kaggwa Gombe High School - Bujuuko', loc: 'Kampala - Mityana Road' },
-    { name: 'St. Andrew Kaggwa Gombe High School - Kawaala', loc: 'Kampala - Hoima Road' }
+    { name: 'Gombe Institute of Business, Science & Technology', loc: 'Kabalagala - Muzaana Zone, Kampala', url: 'http://gibst.ac.ug' },
+    { name: 'Gombe Junior School, Kikajjo', loc: 'Kikajjo (Same Location)', url: 'https://www.kikajjo.gombejuniorschool.ac.ug' },
+    { name: 'Gombe Junior School, Gulu', loc: 'Gulu City', url: 'https://www.gulu.gombejuniorschool.ac.ug' },
+    { name: 'Scooby-Doo International School Uganda (SISU), Katale', loc: 'Along Sseguku - Katale Rd', url: 'https://www.katale.scoobydoointernational.ac.ug' },
+    { name: 'Scooby-Doo International School Uganda (SISU), Gulu', loc: 'Gulu City', url: 'https://www.gulu.scoobydoointernational.ac.ug' },
+    { name: 'St. Andrew Kaggwa Gombe High School, Bujuuko', loc: 'Kampala - Mityana Road', url: 'http://www.bujuuko.gombehighschool.ac.ug/' },
+    { name: 'St. Andrew Kaggwa Gombe High School, Kawaala', loc: 'Kampala - Hoima Road', url: 'http://www.kawaala.gombehighschool.ac.ug/' },
+    { name: 'International Education Pathway Program', loc: 'Gombe Education Service', url: 'https://www.ipp.ges.ac.ug' },
   ];
 
   return (
@@ -503,32 +504,11 @@ const SchoolProfile = () => {
                   </div>
                 )}
 
-                {/* ── TAB 5: COMMUNITY & HEALTH ── */}
+                 {/* ── TAB 5: COMMUNITY & HEALTH ── */}
                 {activeTab === 'community' && (
                   <div className="space-y-8">
                     <div>
-                      <h3 className="text-3xl font-bold text-[#800E13] mb-2">Community, Staff & Health</h3>
-                      <p className="text-gray-500">Our staffing, school healthcare, and partnerships for progress.</p>
-                    </div>
-
-                    {/* Staff & Admin */}
-                    <div className="space-y-4">
-                      <h4 className="text-xl font-bold text-gray-800">Staffing & Administration</h4>
-                      <p className="text-sm text-gray-700 leading-relaxed">
-                        We have a highly trained and qualified staff including teachers, secretaries, nurses, bursars, matrons, night/day guards, drivers, cooks, chef, ICT officers, procurement officers, and sanitation managers.
-                      </p>
-
-                      <div className="bg-[#FFF9F5] p-5 rounded-none border border-[#F5E6DA]">
-                        <span className="text-[#800E13] font-bold text-sm block mb-3">Administrative Team Structure</span>
-                        <div className="grid grid-cols-2 gap-3 text-xs text-gray-600">
-                          <span>👤 Principal</span>
-                          <span>👤 Deputy Principals</span>
-                          <span>👤 Head of Academics Upper</span>
-                          <span>👤 Head of Academics Lower</span>
-                          <span>👤 Head of Co-Curricular</span>
-                          <span>👤 Head of Marketing & Admissions</span>
-                        </div>
-                      </div>
+                      <h3 className="text-3xl font-bold text-[#800E13] mb-2">Community, Staff &amp; Health</h3>
                     </div>
 
                     {/* Health Services */}
@@ -571,10 +551,21 @@ const SchoolProfile = () => {
                     </div>
 
                     {/* Religious functions */}
-                    <div className="bg-[#FFF9F5] p-5 rounded-none border border-[#F5E6DA] space-y-2">
-                      <h5 className="font-bold text-gray-800">Religious Support</h5>
+                    <div className="bg-[#FFF9F5] p-5 rounded-none border border-[#F5E6DA] space-y-3">
+                      <h5 className="font-bold text-[#800E13] text-base">A Multi-Religious School</h5>
+                      <div className="flex flex-wrap gap-2">
+                        {['Muslims', 'Catholics', 'Anglicans', 'Pentecostals', 'Seventh-day Adventists'].map((faith) => (
+                          <span key={faith} className="text-xs font-semibold px-2.5 py-1 rounded-full bg-yellow-100 text-yellow-800 border border-yellow-200">{faith}</span>
+                        ))}
+                      </div>
                       <p className="text-xs text-gray-600 leading-relaxed">
-                        GJS is multi-denominational. We prepare Christian pupils for sacramental orders and invite Bishops annually for confirmation. For Muslim learners, we facilitate fasting during Ramadhan by preparing Daku and breaking-of-fast meals.
+                        At Gombe Junior School, we are committed to providing an inclusive learning environment where every child is respected, valued, and supported in both their academic and spiritual journey. We proudly welcome learners from diverse faith backgrounds, including Muslims, Catholics, Anglicans, Pentecostals, and Seventh-day Adventists.
+                      </p>
+                      <p className="text-xs text-gray-600 leading-relaxed">
+                        We recognize the importance of nurturing each child's faith by providing opportunities for appropriate religious instruction, worship, and spiritual guidance in accordance with their beliefs. Our learners are encouraged to embrace values such as integrity, respect, compassion, discipline, and service, while appreciating the diversity of others.
+                      </p>
+                      <p className="text-xs text-gray-600 leading-relaxed">
+                        By fostering a culture of mutual respect, tolerance, and unity, Gombe Junior School prepares children to become academically successful, morally upright, and socially responsible citizens who can thrive in a diverse and interconnected world.
                       </p>
                     </div>
 
@@ -596,11 +587,19 @@ const SchoolProfile = () => {
                     <div className="space-y-3">
                       {sisterSchools.map((school, idx) => (
                         <div key={idx} className="p-4 bg-gray-50 hover:bg-[#FFF9F5] rounded-none border border-gray-100 flex items-center justify-between gap-4 transition-colors">
-                          <div>
+                          <div className="min-w-0">
                             <span className="text-xs font-bold text-gray-400 block">Institution 0{idx + 1}</span>
-                            <span className="font-bold text-gray-800 text-sm sm:text-base">{school.name}</span>
+                            <span className="font-bold text-gray-800 text-sm sm:text-base block">{school.name}</span>
+                            <a
+                              href={school.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-xs text-[#800E13] hover:underline truncate block mt-0.5"
+                            >
+                              {school.url}
+                            </a>
                           </div>
-                          <span className="text-xs bg-[#800E13]/10 text-[#800E13] font-semibold px-3 py-1.5 rounded-full flex-shrink-0">
+                          <span className="text-xs bg-[#800E13]/10 text-[#800E13] font-semibold px-3 py-1.5 rounded-full flex-shrink-0 text-right">
                             {school.loc}
                           </span>
                         </div>
