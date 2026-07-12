@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  LuArrowLeft, LuMapPin, LuPhone, LuMail, LuAward, LuBookOpen, 
+import {
+  LuArrowLeft, LuMapPin, LuPhone, LuMail, LuAward, LuBookOpen,
   LuUsers, LuActivity, LuHeart, LuBuilding, LuCompass, LuShield,
   LuSparkles, LuCheck, LuClock, LuBriefcase
 } from 'react-icons/lu';
@@ -49,9 +49,9 @@ const SchoolProfile = () => {
   ];
 
   const clubs = [
-    'Chess Club', 'Robotics', 'Scouts Club', 'Piano Club', 'Jazz Band Club', 
-    'Violin Club', 'Guitar Club', 'Happy Kids Club', 'MDD Club', 
-    'Food and Nutrition Club', 'Soccer Academy', 'Art and Crafts Club', 
+    'Chess Club', 'Robotics', 'Scouts Club', 'Piano Club', 'Jazz Band Club',
+    'Violin Club', 'Guitar Club', 'Happy Kids Club', 'MDD Club',
+    'Food and Nutrition Club', 'Soccer Academy', 'Art and Crafts Club',
     'Netball Club', 'Volleyball Club', 'Board Games Club'
   ];
 
@@ -78,9 +78,9 @@ const SchoolProfile = () => {
             Back to Home
           </Link>
           <div className="flex items-center gap-3">
-            <img 
-              src="/Gombe Junior School logo.png" 
-              alt="GJS Logo" 
+            <img
+              src="/Gombe Junior School logo.png"
+              alt="GJS Logo"
               className="h-10 w-10 object-contain hidden sm:block"
             />
             <div>
@@ -105,9 +105,9 @@ const SchoolProfile = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <img 
-              src="/Gombe Junior School logo.png" 
-              alt="Gombe Junior School Logo" 
+            <img
+              src="/Gombe Junior School logo.png"
+              alt="Gombe Junior School Logo"
               className="w-24 h-24 mx-auto mb-6 object-contain drop-shadow-lg"
             />
             <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">
@@ -126,7 +126,7 @@ const SchoolProfile = () => {
       {/* Main Container */}
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          
+
           {/* Navigation Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-24 bg-white rounded-none shadow-md border border-gray-100 p-4 space-y-1">
@@ -138,11 +138,10 @@ const SchoolProfile = () => {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`w-full flex items-center gap-3 px-4 py-3 rounded-none text-left text-sm font-medium transition-all duration-200 ${
-                      isActive 
-                        ? 'text-white shadow-md' 
-                        : 'text-gray-600 hover:bg-[#FFF6CC] hover:text-[#800E13]'
-                    }`}
+                    className={`w-full flex items-center gap-3 px-4 py-3 rounded-none text-left text-sm font-medium transition-all duration-200 ${isActive
+                      ? 'text-white shadow-md'
+                      : 'text-gray-600 hover:bg-[#FFF6CC] hover:text-[#800E13]'
+                      }`}
                     style={isActive ? { backgroundColor: brandColors.secondary } : {}}
                   >
                     <IconComponent className={`w-5 h-5 ${isActive ? 'text-white' : 'text-gray-400 group-hover:text-[#800E13]'}`} />
@@ -164,7 +163,7 @@ const SchoolProfile = () => {
                 transition={{ duration: 0.25 }}
                 className="bg-white rounded-none shadow-xl border border-[#F0E4D8] p-8 sm:p-10 min-h-[500px]"
               >
-                
+
                 {/* ── TAB 1: IDENTITY & HISTORY ── */}
                 {activeTab === 'identity' && (
                   <div className="space-y-8">
@@ -191,18 +190,23 @@ const SchoolProfile = () => {
 
                     {/* Motto Story Card */}
                     <div className="relative overflow-hidden bg-gradient-to-br from-[#FFF7E6] to-[#FFF1D8] p-6 rounded-none border-2 border-yellow-300">
-                      <div className="absolute top-4 right-4 opacity-10">
-                        <LuCompass className="w-24 h-24 text-yellow-600" />
+                      {/* Ssosolye bird watermark */}
+                      <div className="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none select-none" aria-hidden="true">
+                        <img
+                          src="/Ssosolye or Red-chested Cuckoo (Cuculus solitarius).png"
+                          alt=""
+                          className="h-52 w-auto object-contain opacity-60"
+                        />
                       </div>
                       <h4 className="text-xl font-bold text-[#800E13] mb-3 flex items-center gap-2">
                         <LuCompass className="w-5 h-5 text-yellow-500" />
                         Our Motto: “Ssosolye Bwatafa”
                       </h4>
                       <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                        Literally showing that we can achieve success through <strong className="text-[#800E13]">Perseverance</strong>. 
+                        Literally showing that we can achieve success through <strong className="text-[#800E13]">Perseverance</strong>.
                       </p>
-                      <p className="text-gray-600 text-xs italic leading-relaxed">
-                        &ldquo;Ssosolye&rdquo; is a Kiganda name for a bird that eats ripe bananas but continues pecking unripe ones until it falls on a ripe one after a while (the Red Chested Cuckoo). Through its perseverance, it gets the ripe banana. The message is that through toiling we can achieve success.
+                      <p className="text-gray-600 text-xs italic leading-relaxed pr-32">
+                        &ldquo;Ssosolye&rdquo; is a Kiganda name for a bird (Red-chested Cuckoo (Cuculus solitarius)) that eats ripe bananas but continues pecking unripe ones until it falls on a ripe one after a while (the Red Chested Cuckoo). Through its perseverance, it gets the ripe banana. The message is that through toiling we can achieve success.
                       </p>
                     </div>
 
@@ -268,7 +272,7 @@ const SchoolProfile = () => {
                       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                         {coreValues.map((value, i) => (
                           <div key={i} className="p-4 bg-white rounded-none border border-gray-100 shadow-sm hover:border-yellow-300 transition-colors">
-                            <span className="text-[#800E13] font-bold text-lg block mb-1">0{i+1}. {value.name}</span>
+                            <span className="text-[#800E13] font-bold text-lg block mb-1">0{i + 1}. {value.name}</span>
                             <span className="text-xs text-gray-500">{value.desc}</span>
                           </div>
                         ))}
@@ -513,7 +517,7 @@ const SchoolProfile = () => {
                       <p className="text-sm text-gray-700 leading-relaxed">
                         We have a highly trained and qualified staff including teachers, secretaries, nurses, bursars, matrons, night/day guards, drivers, cooks, chef, ICT officers, procurement officers, and sanitation managers.
                       </p>
-                      
+
                       <div className="bg-[#FFF9F5] p-5 rounded-none border border-[#F5E6DA]">
                         <span className="text-[#800E13] font-bold text-sm block mb-3">Administrative Team Structure</span>
                         <div className="grid grid-cols-2 gap-3 text-xs text-gray-600">
@@ -593,7 +597,7 @@ const SchoolProfile = () => {
                       {sisterSchools.map((school, idx) => (
                         <div key={idx} className="p-4 bg-gray-50 hover:bg-[#FFF9F5] rounded-none border border-gray-100 flex items-center justify-between gap-4 transition-colors">
                           <div>
-                            <span className="text-xs font-bold text-gray-400 block">Institution 0{idx+1}</span>
+                            <span className="text-xs font-bold text-gray-400 block">Institution 0{idx + 1}</span>
                             <span className="font-bold text-gray-800 text-sm sm:text-base">{school.name}</span>
                           </div>
                           <span className="text-xs bg-[#800E13]/10 text-[#800E13] font-semibold px-3 py-1.5 rounded-full flex-shrink-0">
