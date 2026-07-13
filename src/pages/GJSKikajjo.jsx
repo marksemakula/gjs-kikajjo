@@ -193,10 +193,7 @@ const GJSKikajjo = () => {
               />
               <div className="leading-tight min-w-0">
                 <p className="text-lg font-bold truncate" style={{ color: brand.burgundy }}>
-                  Gombe Junior School
-                </p>
-                <p className="text-xs font-medium tracking-wide uppercase" style={{ color: brand.gold }}>
-                  Kikajjo Campus &middot; Kampala
+                  Gombe Junior Schools
                 </p>
               </div>
             </Link>

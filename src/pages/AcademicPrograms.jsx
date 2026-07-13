@@ -116,7 +116,7 @@ const AcademicPrograms = () => {
               className="inline-block text-xs font-bold tracking-[0.22em] uppercase mb-5 px-4 py-1.5 rounded-full"
               style={{ backgroundColor: 'rgba(201,162,39,0.22)', color: brand.goldBright }}
             >
-              Gombe Junior School
+              Gombe Junior Schools
             </p>
             <h1 className="text-4xl md:text-5xl font-bold mb-5 leading-tight">
               Academic Programs
@@ -144,7 +144,7 @@ const AcademicPrograms = () => {
               {...fadeUp(0)}
               className="text-lg leading-8 text-gray-700 text-center"
             >
-              At Gombe Junior School, we offer a well-balanced, learner-centered curriculum that
+              At Gombe Junior Schools, we offer a well-balanced, learner-centered curriculum that
               equips pupils with the knowledge, skills, and values needed for academic excellence
               and lifelong success. Our programs are designed to nurture{' '}
               <span className="font-semibold" style={{ color: brand.burgundy }}>
