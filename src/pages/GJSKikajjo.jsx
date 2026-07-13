@@ -71,7 +71,7 @@ const GJSKikajjo = () => {
     {
       label: 'Academics',
       dropdown: [
-        { label: 'Academic Program', href: '#academic-program' },
+        { label: 'Academic Program', route: '/academics/program' },
         { label: 'Curriculum - Subjects', href: '#curriculum' },
         { label: 'Staff', route: '/about/management-team' },
         { label: 'UNEB Results Archive', route: '/academics/uneb-results' },

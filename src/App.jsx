@@ -11,6 +11,7 @@ import SchoolProfile from './pages/SchoolProfile';
 import SchoolManagementCommittee from './pages/SchoolManagementCommittee';
 import ManagementTeam from './pages/ManagementTeam';
 import UNEBResults from './pages/UNEBResults';
+import AcademicPrograms from './pages/AcademicPrograms';
 import './App.css';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/admissions/fees" element={<FeesPage />} />
         <Route path="/admissions/documents" element={<DocumentsPage />} />
         <Route path="/academics/uneb-results" element={<UNEBResults />} />
+        <Route path="/academics/program" element={<AcademicPrograms />} />
       </Routes>
     </BrowserRouter>
   );
