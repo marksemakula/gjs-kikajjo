@@ -30,7 +30,7 @@ const galleryCategories = [
 ];
 
 const galleryImages = [
-  { src: '/GJS%20Pics/GOMBE%20HIGH%20SCHOOL.jpg',          caption: 'Gombe High School',   category: 'campus'  },
+  { src: '/GJS%20Pics/IMG_7542.JPG',                         caption: 'Gombe Junior School',  category: 'campus'  },
   { src: '/GJS%20Pics/GOMBE%20JUNIOR%20SCHOOL%20KIKAJJO.JPG', caption: 'GJS Kikajjo Campus', category: 'campus' },
   { src: '/GJS%20Pics/GOMBE%20JUNIOR%20SCHOOL%20DAY.jpg',  caption: 'GJS Day Life',        category: 'campus'  },
   { src: '/GJS%20Pics/IMG_0069.JPG',  caption: 'School Moments', category: 'moments' },

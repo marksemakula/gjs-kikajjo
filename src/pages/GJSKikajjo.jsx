@@ -6,7 +6,7 @@ import { LuMapPin, LuPhone, LuMail, LuMenu, LuX, LuChevronDown, LuArrowRight } f
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaTiktok, FaWhatsapp } from 'react-icons/fa';
 
 const gjsPics = [
-  '/GJS%20Pics/GOMBE%20HIGH%20SCHOOL.jpg',
+  '/GJS%20Pics/IMG_7542.JPG',
   '/GJS%20Pics/GOMBE%20JUNIOR%20SCHOOL%20KIKAJJO.JPG',
   '/GJS%20Pics/IMG_0069.JPG',
   '/GJS%20Pics/IMG_1378.JPG',
