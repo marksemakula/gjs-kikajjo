@@ -12,9 +12,9 @@ const brandColors = {
 const documents = [
   {
     id: 'kikajjo',
-    title: 'Kikajjo School Requirements & Fees',
+    title: 'Boarding School Requirements',
     file: 'KIKAJJO SCHOOL REQUIREMENTS.pdf',
-    description: 'Detailed breakdown of fees and requirements for our kikajjo section.',
+    description: 'Detailed breakdown of fees and requirements for our boarding section.'
   },
   {
     id: 'day',

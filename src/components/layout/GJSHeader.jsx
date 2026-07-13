@@ -26,7 +26,7 @@ const navItems = [
     dropdown: [
       { label: 'Academic Program', href: '/academics/program' },
       { label: 'Curriculum - Subjects', href: '/academics/curriculum' },
-      { label: 'Departments', href: '/academics/departments' },
+      { label: 'Staff', href: '/about/management-team' },
       { label: 'UNED Results - Archives', href: '/academics/uned-results' },
     ],
   },
@@ -34,18 +34,16 @@ const navItems = [
     label: 'Admissions',
     dropdown: [
       { label: 'Apply Now', href: '/admissions/apply' },
-      { label: 'Resources - Fees', href: '/admissions/fees' },
       { label: 'FAQs', href: '/admissions/faqs' },
       { label: 'Documents', href: '/admissions/documents' },
-      { label: 'Overview', href: '/admissions/overview' },
     ],
   },
   {
     label: "Student's Life",
     dropdown: [
-      { label: 'Articles', href: '/student-life/articles' },
+      { label: 'Updates', href: '/student-life/articles' },
       { label: 'Images', href: '/student-life/images' },
-      { label: 'Student Clubs and Societies', href: '/student-life/clubs' },
+      { label: 'Co-curricular', href: '/student-life/clubs' },
     ],
   },
 ];
