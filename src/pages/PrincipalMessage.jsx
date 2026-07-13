@@ -57,17 +57,30 @@ const PrincipalMessage = () => {
 
             <div className="rounded-none border border-[#F4E2C9] bg-[#FFF5E2] p-5">
               <p className="font-semibold text-[#800E13] mb-3">Clubs and activities include:</p>
-              <ul className="list-disc list-inside space-y-2 text-[#3D2D25]">
-                <li>Soccer Academy</li>
-                <li>Piano Club</li>
-                <li>Violin Club</li>
-                <li>MDD</li>
-                <li>Food and Nutrition</li>
-                <li>Chess Club</li>
-                <li>Netball Club</li>
-                <li>Happy Kids</li>
-                <li>Scouts</li>
-                <li>Robotics</li>
+              <ul className="space-y-2">
+                {[
+                  'Soccer Academy',
+                  'Piano Club',
+                  'Violin Club',
+                  'MDD',
+                  'Food and Nutrition',
+                  'Chess Club',
+                  'Netball Club',
+                  'Happy Kids',
+                  'Scouts',
+                  'Robotics',
+                ].map((club) => (
+                  <li key={club}>
+                    <Link
+                      to="/gallery"
+                      className="inline-flex items-center gap-2 group text-[#3D2D25] hover:text-[#800E13] transition-colors duration-200"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#B1742F] group-hover:bg-[#800E13] transition-colors duration-200 flex-shrink-0" />
+                      <span className="group-hover:underline underline-offset-2">{club}</span>
+                      <span className="text-[#B1742F] opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-xs">→</span>
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
