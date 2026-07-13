@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import {
   LuCalculator,
   LuBookOpen,
-  LuFlask,
+  LuFlaskConical,
   LuGlobe,
   LuMonitor,
   LuMusic,
@@ -49,7 +49,7 @@ const coreSubjects = [
     accent: '#1D4ED8',
   },
   {
-    icon: LuFlask,
+    icon: LuFlaskConical,
     title: 'Science',
     description:
       'Encouraging curiosity, innovation, and practical understanding of the world around us.',
