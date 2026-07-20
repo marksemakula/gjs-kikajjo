@@ -58,6 +58,14 @@ const managementTeam = [
     badge: 'Head of Lower Section',
     objectPosition: 'center 15%',
   },
+  {
+    name: 'Mr. Muyingo Steven',
+    role: 'Admissions Officer',
+    image: '/MR. MUYINGO STEVEN - ADMISSIONS OFFICER.png',
+    bio: 'Mr. Muyingo Steven serves as the Admissions Officer at Gombe Junior School, guiding prospective families through the enrollment process with warmth and professionalism. He ensures every parent and learner receives clear guidance from first inquiry to a confident start at school.',
+    badge: 'Admissions Officer',
+    objectPosition: 'center 15%',
+  },
 ];
 
 const cardVariants = {

@@ -129,7 +129,7 @@ const SchoolProfile = () => {
               “Ssosolye Bwatafa” — Success Through Perseverance
             </p>
             <p className="max-w-3xl mx-auto text-base sm:text-lg text-white/90 leading-relaxed">
-              Our School Profile spells out information on our Identity, our vision, mission, core values, academic information, co-curricular activities, staff information, achievements and admission information. We are pretty proud that our School profile will give you a general picture about the School Culture.
+              Scooby Doo International School Uganda (SISU) was established in 2013 and is located in Kikajjo, off Katale Road, in the Seguku area of Wakiso District, Uganda. Part of the Gombe Educational Services (GES) family of schools, we have grown into a respected institution known for nurturing children's academic, social, emotional and physical development through holistic learning.
             </p>
           </motion.div>
         </div>
@@ -187,8 +187,8 @@ const SchoolProfile = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="bg-[#FFF9F5] p-5 rounded-none border border-[#F5E6DA] space-y-2">
                         <span className="text-xs font-bold uppercase text-[#B1742F]">Nature of School</span>
-                        <h4 className="text-lg font-bold text-gray-800">Mixed Day & Boarding Primary School</h4>
-                        <p className="text-sm text-gray-600">Gombe Junior School is a primary school environment structured to provide a home away from home.</p>
+                        <h4 className="text-lg font-bold text-gray-800">International Early Childhood School</h4>
+                        <p className="text-sm text-gray-600">SISU offers a child-friendly environment in a quiet, traffic-free setting that provides a safe and conducive atmosphere for young children's learning and development.</p>
                       </div>
 
                       <div className="bg-[#FFF9F5] p-5 rounded-none border border-[#F5E6DA] space-y-2">
@@ -230,7 +230,7 @@ const SchoolProfile = () => {
                           <LuMapPin className="w-5 h-5 text-red-500 mt-0.5" />
                           <div>
                             <strong className="text-gray-800 block">School Location</strong>
-                            <span className="text-gray-600">4 miles in Kikajjo along Natete-Nakawuka Road, Kyengera Town Council, Busiro County, Wakiso District.</span>
+                            <span className="text-gray-600">Kikajjo, off Katale Road, Seguku area, Wakiso District, Uganda.</span>
                           </div>
                         </div>
 
@@ -380,142 +380,95 @@ const SchoolProfile = () => {
                   <div className="space-y-8">
                     <div>
                       <h3 className="text-3xl font-bold text-[#800E13] mb-2">School Facilities</h3>
-                      <p className="text-gray-500">Explore the resources that support comfortable living and learning.</p>
+                      <p className="text-gray-500">A child-friendly environment equipped with facilities that support learning and well-being.</p>
                     </div>
 
-                    {/* Facility links — each opens the relevant gallery category */}
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {[
-                        { label: 'Classrooms', slug: 'classrooms' },
-                        { label: 'Dormitories', slug: 'dormitories' },
-                        { label: 'Music Rooms', slug: 'music-rooms' },
-                        { label: 'ICT Lab', slug: 'ict-lab' },
-                        { label: 'Library', slug: 'library' },
-                        { label: 'Home Econ. Room', slug: 'home-economics' },
-                        { label: 'Offices', slug: 'offices' },
-                        { label: 'Boardroom', slug: 'boardroom' },
-                        { label: 'Sick Bay', slug: 'sick-bay' },
+                        { icon: '🏫', label: 'Spacious, Safe & Secure Classrooms', desc: 'Purposefully designed learning spaces that keep children safe and comfortable.' },
+                        { icon: '🛝', label: 'Indoor & Outdoor Play Areas', desc: 'Dedicated spaces for active play and physical development.' },
+                        { icon: '🏊', label: 'Water Play & Swimming Facilities', desc: 'Supervised water play and swimming for fun and development.' },
+                        { icon: '🛏️', label: 'Sleeping Room for Full Day Learners', desc: 'Comfortable rest facilities for children enrolled in the full day program.' },
+                        { icon: '🍽️', label: 'Warm Nutritious Meals On-Site', desc: 'Freshly prepared meals by a qualified school chef every day.' },
+                        { icon: '🩺', label: 'Resident Nurse', desc: 'On-site nurse providing first aid and health support at all times.' },
+                        { icon: '🚌', label: 'School Transport Services', desc: 'Safe transport covering the school and surrounding areas.' },
+                        { icon: '💻', label: 'Smart Interactive Boards', desc: 'ICT-integrated teaching using modern smart interactive boards in classrooms.' },
+                        { icon: '📚', label: 'Learning Materials Provided', desc: 'All essential learning materials are provided by the school.' },
+                        { icon: '🚿', label: 'Clean Sanitation & Secure Compound', desc: 'Well-maintained sanitation facilities within a fully secured school compound.' },
                       ].map((item, i) => (
-                        <Link
-                          key={i}
-                          to={`/gallery?category=${item.slug}`}
-                          className="p-4 bg-gray-50 rounded-none border border-gray-100 flex items-center justify-between group hover:border-[#800E13] hover:bg-red-50/40 transition-colors"
-                        >
-                          <span className="text-sm font-semibold text-gray-700 group-hover:text-[#800E13] transition-colors">{item.label}</span>
-                          <span className="text-[#800E13] text-xs font-bold flex items-center gap-1">
-                            View <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">→</span>
-                          </span>
-                        </Link>
+                        <div key={i} className="flex items-start gap-4 p-4 bg-[#FFF9F5] rounded-none border border-[#F5E6DA] hover:border-[#C9A227] transition-colors">
+                          <span className="text-2xl flex-shrink-0">{item.icon}</span>
+                          <div>
+                            <p className="font-semibold text-gray-800 text-sm">{item.label}</p>
+                            <p className="text-xs text-gray-500 mt-0.5 leading-relaxed">{item.desc}</p>
+                          </div>
+                        </div>
                       ))}
                     </div>
 
-                    {/* Sports courts */}
-                    <div className="border-t border-gray-100 pt-6">
-                      <h4 className="text-lg font-bold text-gray-800 mb-3">Sports Facilities</h4>
-                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs text-gray-600">
-                        <span className="flex items-center gap-2">✓ Basket Ball Court</span>
-                        <span className="flex items-center gap-2">✓ Volley Ball Court</span>
-                        <span className="flex items-center gap-2">✓ Netball Court</span>
-                        <span className="flex items-center gap-2">✓ Football Pitch</span>
-                        <span className="flex items-center gap-2">✓ Lawn Tennis Court</span>
-                        <span className="flex items-center gap-2">✓ Kitchen & Water Pump</span>
-                      </div>
-                      <Link
-                        to="/gallery?category=sports"
-                        className="inline-flex items-center gap-2 mt-4 text-sm font-semibold text-[#800E13] hover:underline"
-                      >
-                        View Sports Facilities in the Gallery →
-                      </Link>
-                    </div>
-
-                    {/* Security & Backup */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 border-t border-gray-100 pt-6">
                       <div className="bg-red-50/50 p-6 rounded-none border border-red-100 flex items-start gap-4">
                         <LuShield className="w-8 h-8 text-[#800E13] flex-shrink-0 mt-1" />
                         <div>
-                          <h5 className="font-bold text-[#800E13] mb-1">CCTV Camera Surveillance</h5>
-                          <p className="text-xs text-gray-600 leading-relaxed">
-                            Our school is under <strong className="text-gray-800">24-hour CCTV Camera Surveillance</strong> to ensure the absolute safety and security of all learners.
-                          </p>
+                          <h5 className="font-bold text-[#800E13] mb-1">Safe & Secure Environment</h5>
+                          <p className="text-xs text-gray-600 leading-relaxed">The school is situated in a quiet, traffic-free environment providing a safe and conducive atmosphere for young children's learning and development.</p>
                         </div>
                       </div>
-
                       <div className="bg-yellow-50/30 p-6 rounded-none border border-yellow-100 flex items-start gap-4">
                         <LuCheck className="w-8 h-8 text-yellow-600 flex-shrink-0 mt-1" />
                         <div>
-                          <h5 className="font-bold text-[#B1742F] mb-1">Backup & Utilities</h5>
-                          <p className="text-xs text-gray-600 leading-relaxed">
-                            Equipped with a standby generator, a high-capacity water pump, and comprehensive sick bay services to handle any utility or medical backup requirements.
-                          </p>
+                          <h5 className="font-bold text-[#B1742F] mb-1">Health & Wellness Support</h5>
+                          <p className="text-xs text-gray-600 leading-relaxed">A resident nurse is always on hand for first aid and health support, ensuring every child's well-being throughout the school day.</p>
                         </div>
                       </div>
-                    </div>
-
-                    {/* Basic Items */}
-                    <div className="bg-[#FFF9F5] p-5 rounded-none border border-[#F5E6DA]">
-                      <h5 className="font-bold text-gray-800 mb-2">Basic Items Provided / Required</h5>
-                      <p className="text-xs text-gray-600 leading-relaxed">
-                        Primary items found at the school include: Mattress, Bucket, Box File, and custom workbooks compiled by the school.
-                      </p>
                     </div>
 
                   </div>
                 )}
 
-                {/* ── TAB 4: CO-CURRICULAR & CLUBS ── */}
+                {/* ── TAB 4: UNIQUE PROGRAMS ── */}
                 {activeTab === 'activities' && (
                   <div className="space-y-8">
                     <div>
-                      <h3 className="text-3xl font-bold text-[#800E13] mb-2">Co-Curricular & Clubs</h3>
-                      <p className="text-gray-500">Fostering talent and teamwork outside the classroom.</p>
+                      <h3 className="text-3xl font-bold text-[#800E13] mb-2">Unique Programs</h3>
+                      <p className="text-gray-500">Scooby Doo International School distinguishes itself through a variety of child-centered programs.</p>
                     </div>
 
-                    <div className="bg-yellow-50/40 p-6 rounded-none border border-yellow-200">
-                      <div className="flex items-center gap-2 mb-2 text-yellow-700">
-                        <LuClock className="w-5 h-5" />
-                        <h4 className="font-bold text-gray-800">Activity Timing</h4>
-                      </div>
-                      <p className="text-sm text-gray-700 leading-relaxed">
-                        Practice and sessions run between <strong className="text-gray-800">4:00 PM and 5:00 PM</strong> during weekdays, and <strong className="text-gray-800">3:00 PM and 5:00 PM</strong> during weekends. This ensures every student has dedicated time for physical and talent training.
-                      </p>
-                    </div>
-
-                    {/* Sports & Clubs lists */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="bg-white p-6 rounded-none border border-gray-100 shadow-sm">
-                        <h5 className="font-bold text-[#800E13] mb-3 pb-2 border-b border-gray-100">Sports & Games</h5>
-                        <ul className="grid grid-cols-2 gap-2 text-xs text-gray-600">
-                          <li>⚽ Football</li>
-                          <li>🏐 Volleyball</li>
-                          <li>🏀 Basketball</li>
-                          <li>🏐 Netball</li>
-                          <li>🏊 Swimming</li>
-                          <li>🏃 Aerobics</li>
-                          <li>♟️ Chess</li>
-                          <li>🏃 Jogging</li>
-                        </ul>
-                      </div>
-
-                      <div className="bg-white p-6 rounded-none border border-gray-100 shadow-sm">
-                        <h5 className="font-bold text-[#800E13] mb-3 pb-2 border-b border-gray-100">Student Clubs</h5>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                          {clubs.map((club, idx) => (
-                            <Link
-                              key={idx}
-                              to={`/gallery?category=${club.category}`}
-                              className="flex items-center gap-1.5 text-gray-600 hover:text-[#800E13] transition-colors group"
-                            >
-                              <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 group-hover:bg-[#800E13] transition-colors flex-shrink-0" />
-                              {club.name}
-                            </Link>
-                          ))}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {[
+                        { icon: '🎮', label: 'Play-Based Learning', desc: 'Following the NCDC and EYFS curriculum for holistic early childhood development.' },
+                        { icon: '📖', label: 'Jolly Phonics & Early Literacy', desc: 'Strong emphasis on Jolly Phonics, early reading, and writing skills.' },
+                        { icon: '🎭', label: 'Arts & Performance', desc: 'Ballet, dance & drama, music, soccer, chess, piano, Kids for Peace, and creative art.' },
+                        { icon: '🏊', label: 'Swimming & Water Play', desc: 'Regular supervised swimming and water play activities for all learners.' },
+                        { icon: '🤝', label: 'Life Skills Development', desc: 'Communication, leadership, and teamwork skills woven into daily learning.' },
+                        { icon: '🌟', label: 'Talent Identification & Nurturing', desc: 'Every child\'s unique talent is identified early and nurtured with care.' },
+                        { icon: '👨‍👩‍👧', label: 'Parent Participation', desc: 'Active parent involvement through presentations, meetings, and school events.' },
+                        { icon: '🙏', label: 'Character Education', desc: 'Values of respect, integrity, teamwork, excellence and God-fearing embedded in school life.' },
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-start gap-4 p-4 bg-[#FFF9F5] rounded-none border border-[#F5E6DA] hover:border-[#C9A227] transition-colors">
+                          <span className="text-2xl flex-shrink-0">{item.icon}</span>
+                          <div>
+                            <p className="font-semibold text-gray-800 text-sm">{item.label}</p>
+                            <p className="text-xs text-gray-500 mt-0.5 leading-relaxed">{item.desc}</p>
+                          </div>
                         </div>
+                      ))}
+                    </div>
+
+                    <div className="bg-white p-6 rounded-none border border-gray-100 shadow-sm">
+                      <h5 className="font-bold text-[#800E13] mb-3 pb-2 border-b border-gray-100">Student Clubs</h5>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
+                        {clubs.map((club, idx) => (
+                          <Link key={idx} to={`/gallery?category=${club.category}`}
+                            className="flex items-center gap-1.5 text-gray-600 hover:text-[#800E13] transition-colors group">
+                            <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 group-hover:bg-[#800E13] transition-colors flex-shrink-0" />
+                            {club.name}
+                          </Link>
+                        ))}
                       </div>
                     </div>
 
-                    <p className="text-xs text-gray-500 italic">
-                      Note: Clubs are chosen by the students according to their personal interests and with guidance from parents.
-                    </p>
+                    <p className="text-xs text-gray-500 italic">Clubs are chosen by students according to their personal interests and with guidance from parents.</p>
                   </div>
                 )}
 
@@ -631,9 +584,9 @@ const SchoolProfile = () => {
 
         {/* Conclusion / Footer Statement */}
         <section className="mt-12 bg-white border border-[#F0E4D8] rounded-none p-8 text-center shadow-lg">
-          <p className="text-[#800E13] font-bold text-xl mb-3">Home Away From Home</p>
+          <p className="text-[#800E13] font-bold text-xl mb-3">Why Choose Us?</p>
           <p className="text-sm text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            &ldquo;As a school that has served in the field of Education for the last thirteen years, we remain committed to providing quality service delivery, to make learning conducive and with an impact to students, nurturing discipline and making the School a home away from home.&rdquo;
+            Choosing the right preschool is one of the most important decisions you will make for your child. At Scooby Doo International School Uganda, we provide an exceptional learning experience built on <strong className="text-gray-800">care, excellence and holistic child development</strong>.
           </p>
         </section>
       </main>
