@@ -66,6 +66,14 @@ const managementTeam = [
     badge: 'Admissions Officer',
     objectPosition: 'center 15%',
   },
+  {
+    name: 'Ms. Namulondo Shamim',
+    role: 'Bursar',
+    image: '/MS. NAMULONDO SHAMIM - BURSAR.png',
+    bio: 'Ms. Namulondo Shamim serves as the Bursar of Gombe Junior School, managing the institution\'s finances with diligence and transparency. She oversees fees, budgeting, and financial planning to keep the school running smoothly for every family.',
+    badge: 'Bursar',
+    objectPosition: 'center 15%',
+  },
 ];
 
 const cardVariants = {
